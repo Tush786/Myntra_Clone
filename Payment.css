@@ -1,0 +1,120 @@
+/* Nav Bar Style */
+*{
+    margin: 0px;
+}
+
+
+#navbar{
+border: 1px solid rgb(223, 222, 221);
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 95%;
+padding: 10px 30px ;
+/* position: fixed; */
+}
+
+#logo{
+  height: 60px;
+  width: 60px;
+}
+
+#navbar div{
+    display: flex;
+    /* border: 1px solid; */
+}
+
+#mid h4{
+    padding: 0px 2px;
+    text-align: center;
+    color: #79747c;
+}
+
+#end img{
+      width: 30px;
+    height: 30px;
+    padding-right: 5px;
+}
+
+#end{
+   align-items: center;
+}
+
+/*  */
+#Pay{
+     display: flex; 
+    
+     width: 80%;
+     margin: auto;
+     margin-top: 20px;
+}
+
+
+#Mid_Por{
+    
+    /* width: 50%; */
+    font-family: "DM Sans", sans-serif;
+    padding-right: 10px;
+    border: #79747c;
+
+}
+
+#Mid_Por>div{
+    border: 1px solid rgb(230, 227, 227);
+    margin: 20px;
+    display: flex;
+  
+}
+
+#Pay_opt >div{
+    height: 100px;
+   border: 1px solid grey;
+   display: flex;
+   align-items: center;
+   background: #f5f5f5;
+   /* width: 100%; */
+}
+
+#Pay_opt{
+    width: 45%;
+}
+
+#Pay_opt>div{
+    border: 1px solid rgb(222, 219, 219);
+}
+
+#Slt_Pay{
+    padding: 20px 0px 0px 20px;
+}
+
+#Slt_Pay button{
+    margin-top: 10px;
+    width: 155px;
+    height: 40px;
+    background: #ff3e6c;
+    color: white;
+    border: none;
+} 
+
+#Pay_opt>div i{
+    margin: 10px;
+}
+
+#offer{
+   flex-direction: column;
+   padding: 20px 10px;
+   border: 1px solid rgb(230, 227, 227);
+}
+
+#Mid_Por div h3{
+    padding: 10px 0px; 
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+}
+
+#Total_Pri{
+   border-left:2px solid rgb(230, 227, 227);
+   height: auto;
+   margin-left: -15px;
+}
