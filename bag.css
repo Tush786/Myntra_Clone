@@ -1,0 +1,135 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    margin-top: -8px;
+    height: 78px;
+}
+.logo{
+    height: 40px;
+    margin-left: 50px;
+}
+
+.right{
+    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right > img{
+    height: 30px;
+    margin-right: 8px;
+}
+
+.center{
+   
+    display:flex ;
+}
+.main{
+    width: 65%;
+    margin: auto;
+
+    display: flex;
+    gap: 20px;
+    
+
+}
+.first{
+    width: 55%;
+    margin-top: 20px;
+}
+.f-1{
+    display: flex;  
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.p1 {
+    margin-left: 10px;
+}
+.p2{
+    border: 1px solid red;
+     padding: 8px ; 
+     border-radius: 2px; 
+     color: red;
+     margin-right: 10px;
+}
+.f-2{
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 1px 0px;
+    padding-left: 20px;
+    line-height: 10px;
+}
+.f-3{
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px 0px;
+}
+.f3span {
+    padding-left: 20px;
+}
+.itembox{
+ 
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.item> img{
+    width: 25%;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    padding-top: 10px;
+}
+.item{
+    display: flex;
+    gap: 10px;
+}
+.seller{
+    color: #94969f;
+    margin-top: -20px;
+}
+
+.footer {
+    border-top: 1px solid #F5F5F6;
+    margin: 0 0 10px 0;
+    width: 70%;
+    margin: auto;
+}
+.footer .container3 {
+    display: inline-block;
+}
+.images {
+    width: 70px;
+    margin-top: 10px;
+    height: 40px;
+}
+.contact {
+    float: right;
+    font-size: 14px;
+    padding-top: 20px;
+    text-decoration: none;
+}
+.Size{
+    background-color: #eae2e2;
+    padding: 6px;
+    border-radius: 2px;
+}
+.Qty{
+    background-color: #eae2e2;
+    padding: 6px;
+    border-radius: 2px;
+}
+#off{
+    margin-left: 10px;
+    color: red;
+}
+.mfwishlist{
+    margin: 25px 0px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+   
+}
