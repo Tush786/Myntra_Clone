@@ -1,0 +1,64 @@
+#navbar {
+  border: 1px solid rgb(223, 222, 221);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 10px 30px;
+  margin: auto;
+}
+
+#logo {
+  height: 60px;
+  width: 60px;
+}
+
+#navbar div {
+  display: flex;
+  /* border: 1px solid; */
+
+}
+
+#navbar a{
+    text-decoration: none;
+}
+
+#mid h4 {
+  padding: 0px 2px;
+  text-align: center;
+  color: #79747c;
+}
+
+#end img {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+}
+
+#end {
+  align-items: center;
+}
+
+/* <--Styling For Fotter Portion---> */
+#fotter {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 55px;
+  align-items: center;
+}
+
+#Mod_Pay {
+  display: flex;
+  /* width: 70%; */
+}
+
+#Mod_Pay > div {
+  margin-right: 6px;
+}
+
+#Mod_Pay img {
+  width: 100%;
+
+  height: 44px;
+}
+/* <---End---> */

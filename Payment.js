@@ -24,6 +24,8 @@ function Deb_Cred() {
   var CN = document.createElement("input");
   CN.setAttribute("type", "number");
   CN.setAttribute("placeholder", "Card Number");
+  CN.setAttribute("id", "C_N");
+ 
 
   var Name = document.createElement("input");
   Name.setAttribute("type", "text");
@@ -31,23 +33,89 @@ function Deb_Cred() {
 
   var Div = document.createElement("div");
   var Val = document.createElement("input");
-  Val.setAttribute("type", "date");
   Val.setAttribute("placeholder", "Valid Thru(MM/YY)");
-  Val.style.width = "210px";
+  Val.setAttribute("type", "month");
+  Val.setAttribute("id","start")
+  Val.setAttribute("name","start")
+  Val.setAttribute("min","2018-03")
+  Val.setAttribute("value","2018-05")
+ 
+  Val.style.width = "270px";
+  Val.style.fontFamily = " sans-serif";
 
   var CVV = document.createElement("input");
+  CVV.setAttribute("class", "cvv");
   CVV.setAttribute("type", "number");
   CVV.setAttribute("placeholder", "CVV");
-  CVV.style.width = "105px";
+  CVV.style.width = "110px";
 
   Div.append(Val, CVV);
 
   var btn = document.createElement("input");
+ 
+  btn.setAttribute("class","Pay_Now")
   btn.setAttribute("type", "submit");
+  btn.textContent="PAY NOW"
+  btn.addEventListener("click",function(){
+    Pay_Now(6);
+  })
 
   form.append(CN, Name, Div, btn);
   document.getElementById("Slt_Pay").append(T_Div, form);
 }
+
+// <--- Generate OTP Functionallity here--->
+function Pay_Now(X) {
+    event.preventDefault()
+   var otp=""
+    for(var i=0;i<X;i++){
+       otp+=Math.floor(Math.random()*10);
+    }
+    var OTP=Number(otp);
+    alert("OTP:-"+OTP);
+    // <-- Generate OTP-->
+
+
+    var H=document.createElement("h2");
+    H.textContent="Enter OTP"
+    var form=document.createElement("form");
+    form.setAttribute("id","OTP_Form")
+
+    var Div=document.createElement("div")
+
+    var In1=document.createElement("input");
+    // In1.setAttribute("type","number");
+
+    var In2=document.createElement("input");
+    // In2.setAttribute("type","number");
+
+    var In3=document.createElement("input");
+    // In3.setAttribute("type","number");
+
+    var In4=document.createElement("input");
+    // In4.setAttribute("type","number");
+
+    var In5=document.createElement("input");
+    // In5.setAttribute("type","number");
+
+    var In6=document.createElement("input");
+    // In6.setAttribute("type","number");
+
+    Div.append(In1,In2,In3,In4,In5,In6)
+
+    var btn=document.createElement("button");
+    btn.setAttribute("class","btn")
+    btn.setAttribute("type","submit");
+    btn.textContent="SUBMIT"
+
+
+    form.append(H,Div,btn);
+    document.getElementById("Slt_Pay").append(form)
+}
+// <----End---->
+
+// <--- OTP Submition Form--->
+
 
 // <--- Pay Through Phone Pay Google Pay Bhim UPI--->
 function Payment() {

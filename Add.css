@@ -1,0 +1,44 @@
+#Left{
+    border: 1px solid;
+}
+
+#Left #Top{
+  display: flex;
+}
+
+
+
+#Add{
+    width: 40%;
+    border: 1px solid grey;
+}
+
+#Add>h3{
+    padding-left: 12px;
+}
+
+#Add input{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    margin: auto;
+    width: 90%;
+    margin-bottom:15px ;
+}
+
+ #Add  div{
+    display: flex;
+    margin-bottom:15px ;
+    padding: 0px 15px;
+    width: 96%;
+    margin: auto;
+}
+
+#Add>div input{
+    
+    padding: 10px;
+    
+    margin: 0px 5px;
+    /* padding: 0px 10px 0px 10px; */
+}
+
