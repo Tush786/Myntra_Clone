@@ -31,8 +31,8 @@
         <h3>Bank Offer</h3>
         <p>10% Instant Discount with Standard Chartered Credit & Debit cards on a min spend of Rs 3,000. TCA</p>
     </div>
-    <div>
-        <h3>Choose Payment Mode</h3>
+    <div style="border: none;">
+        <h3 >Choose Payment Mode</h3>
        </div>
    <div >
     <div id="Pay_opt">
@@ -40,11 +40,11 @@
             <i class="fa-brands fa-amazon-pay"></i>
             <p>Cash On Delivery (Cash/Card/UPI)</p>
         </div>
-        <div>
+        <div onclick="Deb_Cred()">
             <i class="fa-solid fa-credit-card"></i>
             <p>Credit/Debit Card</p>
         </div>
-        <div>
+        <div onclick="Payment()">
             <i class="fa-brands fa-cc-amazon-pay"></i>
             <p>PnonePay/Google Pay/ BHIM UPI</p>
         </div>
@@ -58,24 +58,38 @@
         </div>
     </div>
     <div id="Slt_Pay">
-        <h4>CASH ON DELIVERY</h4>
-        <button>PAY</button>
+       
     </div>
     </div>
     
     
    </div>
    <div id="Total_Pri">
-    <!-- <form action="" id="Pay_Ment">
-        <label for="Pri_Detail">Price Details:</label>
-        <input type="text" value="Enter Detail">
-        <label for="Pri_Detail">Total MRP:</label>
-        <input type="text" value="Enter Detail">
-        <label for="Pri_Detail">Discount on MRP:</label>
-        <input type="text" value="Enter Detail">
-    </form> -->
+   <div class="Total">
+    <div>
+        <p>PRICE DETAILS :<span id="Pri_D">Null</span></p>
+        <hr>
+    </div>
+    <div>
+        <p>Total MRP :<span id="Pri_MRP">Null</span></p>
+        <hr>
+    </div>
+    
+    <div>
+        <p>Discount on MRP :<span id="Pri_Dis">Null</span></p>
+        <hr>
+    </div>
+   
+    <div>
+        <p>Total Amount :<span id="Pri_TA">Null</span></p>
+        <hr>
+    </div>
+   
+   </div>
        
    </div>
 </div>
 </body>
+<script src="Payment.js"></script>
+
 </html>
