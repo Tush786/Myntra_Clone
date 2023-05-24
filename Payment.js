@@ -65,6 +65,7 @@ function Deb_Cred() {
 }
 
 // <--- Generate OTP Functionallity here--->
+// <--- OTP Submition Form--->
 function Pay_Now(X) {
     event.preventDefault()
    var otp=""
@@ -114,7 +115,7 @@ function Pay_Now(X) {
 }
 // <----End---->
 
-// <--- OTP Submition Form--->
+
 
 
 // <--- Pay Through Phone Pay Google Pay Bhim UPI--->
@@ -177,3 +178,8 @@ function Payment() {
   form.append(div1, div2, div3, btn);
   document.getElementById("Slt_Pay").append(form);
 }
+
+
+// <--- Calculate the Total Product Price --->
+
+
