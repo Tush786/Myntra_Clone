@@ -93,7 +93,7 @@
             padding-bottom: 10px;
             padding-left: 20px;
         }
-        button{
+        #btn{
             background-color: rgb(247, 74, 103);
             width: 100%;
             border: none;
@@ -160,10 +160,30 @@
                 <h3>Login <span>or</span> Signup</h3>
                 <input type="number" name="" id="phone" placeholder="Mobile Number*">
                 <h5>By continuing, I agree to the <span>Terms of Use</span> & <span>Privacy Policy</span></h5>
-                <button>CONTINUE</button>
+                <input type="submit" id="btn">
                 <h5>Having trouble logging in? <span>Get Help</span></h5>
             </div>
         </div>
     </div>
 </body>
 </html>
+
+<script>
+    document.querySelector("#btn").addEventListener("click", myAcc)
+
+    var accArr = JSON.parse(localStorage.getItem("number"))||[]
+
+    function myAcc() {
+        event.preventDefault()
+        var accObj = {
+            num: document.querySelector("#phone").value
+        }
+
+        accArr.push(accObj)
+        localStorage.setItem("number", JSON.stringify(accArr))
+
+        window.location.href = "loginOtp.html"
+
+        document.querySelector("#phone").value = ""
+    }
+</script>
