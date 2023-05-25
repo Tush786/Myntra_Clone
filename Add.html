@@ -21,7 +21,7 @@
          
           <h4>-----------</h4>
           <a href="./Add.html">
-            <h4>ADDRESS</h4>
+            <h4 class="add">ADDRESS</h4>
           </a>
          
           <h4>-----------</h4>
@@ -41,7 +41,7 @@
       </div>
 
       <!-- Select Address -->
-      <div>
+      <div id="Add_Sec">
         <div id="Left">
             <div id="Top">
                 <h2>Select Delivery Address</h2>
@@ -51,7 +51,7 @@
                 <form id="Add">
                     <h3>CONTACT DETAILS</h3>
                     <input type="text" placeholder="Name" id="name">
-                    <input type="number" placeholder="Name" id="number">
+                    <input type="number" placeholder="Mobile Number" id="number">
                     <h3>ADDRESS</h3>
                     <input type="number" placeholder="PIN CODE*" id="Pin">
                     <input type="text" placeholder="Addres(house no,Building,Street,Area)*" id="Address">
@@ -61,14 +61,51 @@
                         <input type="text" placeholder="State*" id="State">
                     </div>
                     <div id="btn">
-                        <button>Home</button>
-                        <button>Work</button>
-                    </div>
-                    <input type="submit" text="ADD ADDRESS"
+                        <h3>SAVE ADDRESS AS</h3>
+                        <div>
+                          <form action="">
+                          <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="home">HOME</label>
+                          <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="office">OFFICE</label>
+                          </form>
+                        </div>
+                        </div>
+                    <button id="Submit" onclick="Submit_Add()">ADD ADDRESS</button>
                 </form>
+                
             </div>
+            <div id="Container"></div>
         </div>
-        <div></div>
+        <div id="Total_Pri">
+          <div>
+            <h4>PRICE DETAILS(1 item)</h4>
+            <div id="Pri_Cal">
+              <div>
+                <p>Total MRP</p>
+                <span id="TP">0</span>
+              </div>
+              <div>
+                <p>Discount on MRP</p>
+                <span id="DP">0</p>
+              </div>
+              <div>
+                <p>Convenience Fee <button>Know More</button></p>
+                <span id="Con_Fee">-99</span>
+              </div>
+            </div>
+
+            <div id="Final_Cal">
+              <p>Total MRP</p>
+              <span id="Final_Pri">0</span>
+            </div>
+            <div id="Conti">
+              <a href="./Payment.html">
+                <h4 onclick="Change_Col()">Continue</h4>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Footer Section -->
@@ -138,4 +175,5 @@
         <h3>Need Help ? Contact Us</h3>
       </div>
 </body>
+<script src="Add.js"></script>
 </html>

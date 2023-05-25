@@ -1,44 +1,196 @@
-#Left{
-    border: 1px solid;
-}
-
-#Left #Top{
+#Add_Sec {
+  width: 90%;
+  margin: auto;
   display: flex;
+  margin-top: 20px;
 }
 
-
-
-#Add{
-    width: 40%;
-    border: 1px solid grey;
+#Left {
+  width: 53.5%;
 }
 
-#Add>h3{
-    padding-left: 12px;
+#Left > div {
+  border: 1px solid rgb(223, 222, 221);
+  margin-bottom: 10px;
 }
 
-#Add input{
+#Left #Top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(223, 222, 221);
+  padding: 0px 10px;
+}
+
+#Top button {
+  width: 150px;
+  height: 30px;
+}
+#Add {
+  width: 100%;
+}
+
+#Add > h3 {
+  padding-left: 12px;
+}
+
+#Add input {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  border-radius: 10px;
+  margin: auto;
+  width: 90%;
+  margin-bottom: 15px;
+  border: 1px solid rgb(223, 222, 221);
+}
+
+#Add div {
+  display: flex;
+  width: 97%;
+  margin: auto;
+}
+
+#Add > div input {
+  padding: 20px 10px;
+  margin: 0px 8px;
+  border: 1px solid rgb(223, 222, 221);
+}
+
+#btn {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  text-align: center;
+}
+
+#Left h3 {
+  margin-left: 20px;
+}
+#btn div {
+  width: 30%;
+  align-items: center;
+  justify-content: start;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+#btn > div input {
+  margin: 10px;
+}
+
+#Submit {
+  width: 100%;
+  justify-content: center;
+  background-color: #ff3f6c;
+  padding: 20px 10px;
+  border: 1px solid rgb(223, 222, 221);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+   font-weight: 600;
+   border-radius: 5px;
+   font-family: Assistance, Helvetica, sans-serif;
+}
+
+#Right {
+  width: 50%;
+  border: 1px solid;
+  height: 100%;
+}
+
+#Container {
+  width: 100%;
+  height: auto;
+ 
+}
+
+#Container>div{
+    border: 1px solid rgb(223, 222, 221);
+    padding: 30px;
+    color: #79747c;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Assistance, Helvetica, sans-serif;
+}
+
+#Container button{
+   width: 120px;
+   padding: 10px 20px;
+   margin-right: 20px;
+   background: none;
+   font-size: 16px;
+   font-weight: 600;
+   border-radius: 5px;
+   font-family: Assistance, Helvetica, sans-serif;
+}
+
+#Total_Pri {
+    width: 30%;
+    border-left: 1px solid rgb(230, 227, 227);
+    padding-top: 20px;
+    color: #424553;
+  }
+  
+  #Total_Pri p {
+    padding: 10px 0px 10px;
+  }
+  
+  #Total_Pri > div {
+    margin-left: 55px;
+  }
+  
+  #Total_Pri button {
+    font-family: Assistace, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding-left: 10px;
+    background: none;
+    border: none;
+  }
+  
+  #Pri_Cal > div {
     display: flex;
-    flex-direction: column;
-    padding: 10px 10px;
-    margin: auto;
-    width: 90%;
-    margin-bottom:15px ;
-}
-
- #Add  div{
+    justify-content: space-between;
+    font-family: Assistace, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  
+  }
+  
+  #Final_Cal {
     display: flex;
-    margin-bottom:15px ;
-    padding: 0px 15px;
-    width: 96%;
-    margin: auto;
-}
+    justify-content: space-between;
+    border-top: 1px solid rgb(230, 227, 227);
+    font-family: Assistace, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    align-items: center;
+  }
 
-#Add>div input{
-    
-    padding: 10px;
-    
-    margin: 0px 5px;
-    /* padding: 0px 10px 0px 10px; */
-}
+  #Conti{
+    padding: 10px 30px;
+    background-color: #ff3f6c;
+    color: white;
+    /* width: 90%; */
+    text-align: center;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  #Conti a{
+    text-decoration: none;
+  }
+
+  #Conti h4{
+    color: white;
+    font-family: Assistace, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+   
+  }
 

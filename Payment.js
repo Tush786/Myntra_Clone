@@ -100,7 +100,7 @@ function Pay_Now(X) {
   btn.setAttribute("id", "BTN");
   btn.setAttribute("type", "submit");
   btn.textContent = "SUBMIT";
-  //   <--Submit OTP Event--->
+  //   <--Submit OTP Event We Are sending parameter otp string for compaire--->
   btn.addEventListener("click", function () {
     Verify_OTP(otp);
   });
