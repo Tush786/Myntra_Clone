@@ -1,3 +1,4 @@
+/* <---Nav Bar Styling---> */
 #navbar {
   border: 1px solid rgb(223, 222, 221);
   display: flex;
@@ -16,11 +17,10 @@
 #navbar div {
   display: flex;
   /* border: 1px solid; */
-
 }
 
-#navbar a{
-    text-decoration: none;
+#navbar a {
+  text-decoration: none;
 }
 
 #mid h4 {

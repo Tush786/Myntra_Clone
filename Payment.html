@@ -16,21 +16,20 @@
       </div>
       <div id="mid">
         <a href="./Bag.html">
-            <h4>BAG</h4>
-          </a>
-     
-      <h4>-----------</h4>
-      <a href="./Add.html">
-        <h4>ADDRESS</h4>
-      </a>
-     
-      <h4>-----------</h4>
+          <h4>BAG</h4>
+        </a>
 
-      <a href="./Payment.html">
-        <h4>PAYMENT</h4>
-      </a>
-     
-    </div>
+        <h4>-----------</h4>
+        <a href="./Add.html">
+          <h4>ADDRESS</h4>
+        </a>
+
+        <h4>-----------</h4>
+
+        <a href="./Payment.html">
+          <h4>PAYMENT</h4>
+        </a>
+      </div>
       <div id="end">
         <img
           src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"
@@ -64,27 +63,27 @@
           <!-- Choose Payment Method -->
           <div id="MID">
             <div id="Pay_opt">
-                <div>
-                    <i class="fa-sharp fa-regular fa-star"></i>
-                    <p>Recommended</p>
-                  </div>
-              <div>
+              <div id="op1">
+                <i class="fa-sharp fa-regular fa-star"></i>
+                <p>Recommended</p>
+              </div>
+              <div id="op2">
                 <i class="fa-brands fa-amazon-pay"></i>
                 <p>Cash On Delivery (Cash/Card/UPI)</p>
               </div>
-              <div onclick="Deb_Cred()">
+              <div id="op3">
                 <i class="fa-solid fa-credit-card"></i>
                 <p>Credit/Debit Card</p>
               </div>
-              <div onclick="Payment()">
+              <div id="op4">
                 <i class="fa-brands fa-cc-amazon-pay"></i>
                 <p>PhonePe/Google Pay/ BHIM UPI</p>
               </div>
-              <div>
+              <div id="op5">
                 <i class="fa-solid fa-wallet"></i>
                 <p>Paytm/Wallet</p>
               </div>
-              <div>
+              <div id="op6">
                 <i class="fa-solid fa-building-columns"></i>
                 <p>Net Banking</p>
               </div>
@@ -92,7 +91,7 @@
             <!-- Payment Section Show Here After Selection Payment method -->
             <div id="Slt_Pay"></div>
           </div>
-          
+
           <!-- Add Gift Card -->
           <div id="Gift_Card">
             <div>
@@ -108,21 +107,21 @@
             <div id="Pri_Cal">
               <div>
                 <p>Total MRP</p>
-                <p>0</p>
+                <span id="TP">0</span>
               </div>
               <div>
                 <p>Discount on MRP</p>
-                <p>0</p>
+                <span id="DP">0</p>
               </div>
               <div>
                 <p>Convenience Fee <button>Know More</button></p>
-                <p>0</p>
+                <span id="Con_Fee">-99</span>
               </div>
             </div>
 
             <div id="Final_Cal">
               <p>Total MRP</p>
-              <p>0</p>
+              <span id="Final_Pri">0</span>
             </div>
           </div>
         </div>
