@@ -5,15 +5,32 @@ var Arr_Add=JSON.parse(localStorage.getItem("Address"))||[]
 Display_Add(Arr_Add)
 function Submit_Add(){
     event.preventDefault()
-    var obj={
-        Name:document.getElementById("name").value,
-        M_No:document.getElementById("number").value,
-        Pin:document.getElementById("Pin").value,
-        Add:document.getElementById("Address").value,
-        Town:document.getElementById("Town").value,
-        City:document.getElementById("City").value,
-       State:document.getElementById("State").value,
+        var Name=document.getElementById("name").value;
+        var M_No=document.getElementById("number").value;
+        var Pin=document.getElementById("Pin").value;
+        var Add=document.getElementById("Address").value;
+        var Town=document.getElementById("Town").value;
+        var City=document.getElementById("City").value;
+        var State=document.getElementById("State").value;
+    if(Name==""||M_No==""||Pin==""||Add==""||Town==""||City==""||State=="")
+    {
+        alert("Fill All input value");
+        return;
     }
+
+
+
+    var obj={
+        Name:Name,
+        M_No:M_No,
+        Pin:Pin,
+        Add:Add,
+        Town:Town,
+        City:City,
+       State:State,
+    }
+
+    
     console.log(obj)
     Arr_Add.push(obj)
     localStorage.setItem("Address",JSON.stringify(Arr_Add))
@@ -57,6 +74,10 @@ function Display_Add(Arr){
 
        Main_Div.append(H1,P,No,Pay_opt,Rem,Edit)
        document.getElementById("Container").append(Main_Div)
+
+    //    <-------- Display None-------->
+       var ADD=document.getElementById("Add");
+       ADD.style.display="None"
     })
 
 }
@@ -66,6 +87,8 @@ function Del(elm,i){
     Arr_Add.splice(i,1);
     localStorage.setItem("Address",JSON.stringify(Arr_Add))
     Display_Add(Arr_Add)
+    var ADD=document.getElementById("Add");
+    ADD.style.display="visible"
 }
 
 

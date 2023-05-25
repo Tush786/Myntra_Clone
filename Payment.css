@@ -17,10 +17,12 @@
 }
 
 #Mid_Por {
-  width: 65%;
+  width: 60%;
   font-family: "DM Sans", sans-serif;
-  padding-right: 10px;
+  padding-right: 50px;
+ 
   border: #79747c;
+  margin-top: 30px;
 }
 
 #Mid_Por > div {
@@ -30,9 +32,8 @@
 }
 
 #Pay_opt > div {
-  padding: 45px 0px;
-  border: 1px solid grey;
-  display: flex;
+  padding: 25px 0px;
+    display: flex;
   align-items: center;
   background: #f5f5f5;
   padding-right: 10px;
@@ -40,17 +41,16 @@
 
 #Pay_opt {
   width: auto;
-  color: #424553;
+   color: #424553;
   font-family: Assistance, Helvetica, sans-serif;
   border: 1px solid rgb(230, 227, 227);
 }
 
 #Pay_opt > div {
-  border: 1px solid rgb(222, 219, 219);
+  border: 1px solid rgb(237, 235, 235);
   font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  border: 1px solid rgb(230, 227, 227);
+  font-size: 18px;
+  height: auto;
 }
 
 #Pay_opt > div i {
@@ -83,7 +83,7 @@
 #Total_Pri {
   width: 30%;
   border-left: 1px solid rgb(230, 227, 227);
-  padding-top: 20px;
+  margin-top: 50px;
   color: #424553;
 }
 
@@ -98,7 +98,7 @@
 #Total_Pri button {
   font-family: Assistace, Helvetica, sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 19px;
   padding-left: 10px;
   background: none;
   border: none;
@@ -108,10 +108,16 @@
   display: flex;
   justify-content: space-between;
   font-family: Assistace, Helvetica, sans-serif;
+  padding-top: 10px;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 16px;
+}
+@media only screen and (max-width: 500px) {
+  #Pri_Cal > div{
+    flex-direction: column;
+  }
 }
 
 #Final_Cal {
@@ -120,7 +126,13 @@
   border-top: 1px solid rgb(230, 227, 227);
   font-family: Assistace, Helvetica, sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 500px) {
+  #Final_Cal {
+    flex-direction: column;
+  }
 }
 /* <---End---> */
 
@@ -202,6 +214,11 @@ input {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 650px) {
+  #Gift_Card > div {
+   flex-direction: column;
+  }
+}
 
 #Gift_Card > div h3 {
   margin-left: 10px;
@@ -223,7 +240,6 @@ input {
 }
 
 #OTP_Form > div {
-  /* border: 1px solid; */
   display: flex;
   justify-content: center;
 }

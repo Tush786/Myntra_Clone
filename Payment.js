@@ -5,6 +5,8 @@ document.getElementById("op4").addEventListener("click", Payment);
 // <--- Pay Through Credit/Debit Card--->
 function Deb_Cred() {
   event.preventDefault();
+  var ID=document.getElementById("op3");
+  ID.style.background="white"
   var T_Div = document.createElement("div");
   T_Div.setAttribute("class", "T_Div");
 
@@ -22,17 +24,20 @@ function Deb_Cred() {
   form.setAttribute("id", "Pay_form");
 
   var CN = document.createElement("input");
-  CN.setAttribute("type", "number");
+  CN.setAttribute("type", "text");
   CN.setAttribute("placeholder", "Card Number");
   CN.setAttribute("id", "C_N");
+  CN.setAttribute("maxlength","16")
 
   var Name = document.createElement("input");
+  Name.setAttribute("id","Name_Card")
   Name.setAttribute("type", "text");
   Name.setAttribute("placeholder", "Name On Card");
 
   var Div = document.createElement("div");
   var Val = document.createElement("input");
   Val.setAttribute("placeholder", "Valid Thru(MM/YY)");
+  Val.setAttribute("id","Set_Date")
   Val.setAttribute("type", "month");
   Val.setAttribute("id", "start");
   Val.setAttribute("name", "start");
@@ -43,9 +48,10 @@ function Deb_Cred() {
   Val.style.fontFamily = " sans-serif";
 
   var CVV = document.createElement("input");
-  CVV.setAttribute("class", "cvv");
-  CVV.setAttribute("type", "number");
+  CVV.setAttribute("id", "cvv");
+  CVV.setAttribute("type", "text");
   CVV.setAttribute("placeholder", "CVV");
+  CVV.setAttribute("maxlength","3")
   CVV.style.width = "110px";
 
   Div.append(Val, CVV);
@@ -58,9 +64,10 @@ function Deb_Cred() {
   btn.addEventListener("click", function () {
     Pay_Now(4);
   });
-
   form.append(CN, Name, Div, btn);
   document.getElementById("Slt_Pay").append(T_Div, form);
+
+  
 }
 
 // <--- Generate OTP Functionallity here--->
@@ -72,11 +79,18 @@ function Pay_Now(X) {
     otp += Math.floor(Math.random() * 10);
   }
   var OTP = Number(otp);
-  alert("OTP:-" + OTP);
+  if(Card_No==""||Ca_Name==""||date==""||CVV=="")
+  {
+    alert("Fill Field")
+  }
+  else{
+    alert("OTP:-" + OTP);
+  }
   // <-- Generate OTP-->
 
   var H = document.createElement("h2");
   H.textContent = "Enter OTP";
+  H.style.paddingTop="25px"
   var form = document.createElement("form");
   form.setAttribute("id", "OTP_Form");
 
@@ -84,6 +98,7 @@ function Pay_Now(X) {
 
   var In1 = document.createElement("input");
   In1.setAttribute("id", "In1");
+  In1.setAttribute("type","text")
 
   var In2 = document.createElement("input");
   In2.setAttribute("id", "In2");
@@ -109,12 +124,27 @@ function Pay_Now(X) {
 
   form.append(H, Div, btn);
   document.getElementById("Slt_Pay").append(form);
+
+  var Card_No=document.getElementById("C_N").value;
+  var Ca_Name=document.getElementById("Name_Card").value;
+  var date=document.getElementById("Set_Date").value;
+  var CVV=document.getElementById("cvv").value;
+  if(Card_No==""||Ca_Name==""||date==""||CVV=="")
+  {
+    alert("input")
+  }
+
+  // <------- Display None Credit Card Form------->
+  var FORM=document.getElementById("Slt_Pay");
+  FORM.style.display="None"
+ 
 }
 // <----End---->
 
 // <--- Submit OTP--->
 function Verify_OTP(otp) {
   event.preventDefault();
+ 
   var St = "";
   var OT1 = document.getElementById("In1").value;
   var OT2 = document.getElementById("In2").value;
@@ -128,6 +158,9 @@ function Verify_OTP(otp) {
   } else {
     alert("Please Check OTP");
   }
+
+   var Payment=document.getElementById("P");
+  Payment.style.color="white"
 }
 // <--- End--->
 

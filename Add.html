@@ -1,179 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Common.css" />
-    <link rel="stylesheet" href="Add.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="Common.css" />
+  <link rel="stylesheet" href="Add.css" />
 </head>
+
 <body>
-    <!-- Nav Bar Section -->
-    <div id="navbar">
-        <div id="logo">
-          <img src="https://bit.ly/3LDsXgz" />
-        </div>
-        <div id="mid">
-            <a href="./Bag.html">
-                <h4>BAG</h4>
-              </a>
-         
-          <h4>-----------</h4>
-          <a href="./Add.html">
-            <h4 class="add">ADDRESS</h4>
-          </a>
-         
-          <h4>-----------</h4>
+  <!-- Nav Bar Section -->
+  <div id="navbar">
+    <div id="logo">
+      <img src="https://bit.ly/3LDsXgz" />
+    </div>
+    <div id="mid">
+      <a href="./Bag.html">
+        <h4>BAG</h4>
+      </a>
 
+      <h4>-----------</h4>
+      <a href="./Add.html">
+        <h4 class="add">ADDRESS</h4>
+      </a>
+
+      <h4>-----------</h4>
+
+      <a href="./Payment.html">
+        <h4>PAYMENT</h4>
+      </a>
+
+    </div>
+    <div id="end">
+      <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="logo" />
+      <h4>
+        <p>100 % SECURE</p>
+      </h4>
+    </div>
+  </div>
+
+  <!-- Select Address -->
+  <div id="Add_Sec">
+    <div id="Left">
+      <div id="Top">
+        <h2>Select Delivery Address</h2>
+        <button>ADD NEW ADDRESS</button>
+      </div>
+      <div>
+        <form id="Add" accept="#">
+          <h3>CONTACT DETAILS</h3>
+          <input type="text" placeholder="Name" id="name" required>
+          <input type="number" placeholder="Mobile Number" id="number" required>
+          <h3>ADDRESS</h3>
+          <input type="number" placeholder="Pin Code*" id="Pin" required>
+          <input type="text" placeholder="Addres(house no,Building,Street,Area)*" id="Address" type="text" required >
+          <input type="text" placeholder="Locality/Town*" id="Town" required>
+          <div id="Di_St">
+            <input   placeholder="City/District*" id="City" type="text"  required>
+            <input  placeholder="State*" id="State"  type="text"  required>
+          </div>
+          <div id="Submit">
+          <input type="submit" onclick="Submit_Add()" >
+        </div>
+        </form>
+
+      </div>
+      <div id="Container"></div>
+    </div>
+    <div id="Total_Pri">
+      <div>
+        <h4>PRICE DETAILS(1 item)</h4>
+        <div id="Pri_Cal">
+          <div>
+            <p>Total MRP</p>
+            <p id="TP">0</p>
+          </div>
+          <div>
+            <p>Discount on MRP</p>
+            <p id="DP">0</p>
+          </div>
+          <div>
+            <p>Convenience Fee <button>Know More</button></p>
+            <p id="Con_Fee">-99</p>
+          </div>
+        </div>
+
+        <div id="Final_Cal">
+          <p>Total MRP</p>
+          <p id="Final_Pri">0</p>
+        </div>
+        <div id="Conti">
           <a href="./Payment.html">
-            <h4>PAYMENT</h4>
+            <h4 onclick="Change_Col()">Continue</h4>
           </a>
-         
-        </div>
-        <div id="end">
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"
-            alt="logo"
-          />
-          <h4><p>100 % SECURE</p></h4>
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Select Address -->
-      <div id="Add_Sec">
-        <div id="Left">
-            <div id="Top">
-                <h2>Select Delivery Address</h2>
-                <button>ADD NEW ADDRESS</button>
-            </div>
-            <div>
-                <form id="Add">
-                    <h3>CONTACT DETAILS</h3>
-                    <input type="text" placeholder="Name" id="name">
-                    <input type="number" placeholder="Mobile Number" id="number">
-                    <h3>ADDRESS</h3>
-                    <input type="number" placeholder="PIN CODE*" id="Pin">
-                    <input type="text" placeholder="Addres(house no,Building,Street,Area)*" id="Address">
-                    <input type="text" placeholder="Locality/Town*" id="Town">
-                    <div id="Di_St">
-                        <input type="text" placeholder="City/District*" id="City">
-                        <input type="text" placeholder="State*" id="State">
-                    </div>
-                    <div id="btn">
-                        <h3>SAVE ADDRESS AS</h3>
-                        <div>
-                          <form action="">
-                          <input type="radio" id="html" name="fav_language" value="HTML">
-                            <label for="home">HOME</label>
-                          <input type="radio" id="html" name="fav_language" value="HTML">
-                            <label for="office">OFFICE</label>
-                          </form>
-                        </div>
-                        </div>
-                    <button id="Submit" onclick="Submit_Add()">ADD ADDRESS</button>
-                </form>
-                
-            </div>
-            <div id="Container"></div>
-        </div>
-        <div id="Total_Pri">
-          <div>
-            <h4>PRICE DETAILS(1 item)</h4>
-            <div id="Pri_Cal">
-              <div>
-                <p>Total MRP</p>
-                <span id="TP">0</span>
-              </div>
-              <div>
-                <p>Discount on MRP</p>
-                <span id="DP">0</p>
-              </div>
-              <div>
-                <p>Convenience Fee <button>Know More</button></p>
-                <span id="Con_Fee">-99</span>
-              </div>
-            </div>
-
-            <div id="Final_Cal">
-              <p>Total MRP</p>
-              <span id="Final_Pri">0</span>
-            </div>
-            <div id="Conti">
-              <a href="./Payment.html">
-                <h4 onclick="Change_Col()">Continue</h4>
-              </a>
-            </div>
-          </div>
-        </div>
+  <!-- Footer Section -->
+  <div id="fotter">
+    <div id="Mod_Pay">
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png" alt="" />
       </div>
-
-      <!-- Footer Section -->
-      <div id="fotter">
-        <div id="Mod_Pay">
-          <div>
-            <img
-              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png"
-              alt="visa"
-            />
-          </div>
-          <div>
-            <img
-              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png"
-              alt="Master Card"
-            />
-          </div>
-          <div>
-            <img
-              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png"
-              alt="American Exp"
-            />
-          </div>
-          <div>
-            <img
-              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png"
-              alt="Diner Club International"
-            />
-          </div>
-          <div>
-            <img
-              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png"
-              alt="Net Banking"
-            />
-          </div>
-          <div>
-            <img
-              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png"
-              alt="Cash On Delivery"
-            />
-          </div>
-          <div>
-            <img
-              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png"
-              alt="RupCard"
-            />
-          </div>
-          <div>
-            <img
-              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png"
-              alt="Pay Pal"
-            />
-          </div>
-          <div>
-            <img
-              src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png"
-              alt="BHIM UPI"
-            />
-          </div>
-        </div>
-        <h3>Need Help ? Contact Us</h3>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png" alt="visa" />
       </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png" alt="Master Card" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png" alt="American Exp" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png"
+          alt="Diner Club International" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png" alt="Net Banking" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png" alt="Cash On Delivery" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png" alt="RupCard" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png" alt="Pay Pal" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png" alt="BHIM UPI" />
+      </div>
+    </div>
+    <h3>Need Help ? Contact Us</h3>
+  </div>
 </body>
 <script src="Add.js"></script>
+
 </html>

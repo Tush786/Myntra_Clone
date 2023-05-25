@@ -23,10 +23,20 @@
   text-decoration: none;
 }
 
+@media only screen and (max-width: 650px) {
+  #mid {
+    display: none;
+  }
+}
+
 #mid h4 {
   padding: 0px 2px;
   text-align: center;
   color: #79747c;
+  font-family: Assistance,Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
 }
 
 #end img {
@@ -46,6 +56,11 @@
   margin: 10px 55px;
   align-items: center;
 }
+@media only screen and (max-width: 500px) {
+  #fotter {
+    flex-direction: column;
+  }
+}
 
 #Mod_Pay {
   display: flex;
@@ -55,10 +70,21 @@
 #Mod_Pay > div {
   margin-right: 6px;
 }
+@media only screen and (max-width: 650px) {
+  #Mod_Pay {
+    flex-wrap: wrap;
+  }
+}
 
 #Mod_Pay img {
   width: 100%;
 
   height: 44px;
+}
+
+@media only screen and (max-width: 700px) {
+  #Final_Cal {
+    flex-direction: column;
+  }
 }
 /* <---End---> */
