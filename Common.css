@@ -1,10 +1,17 @@
 /* <---Nav Bar Styling---> */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
 #navbar {
   border: 1px solid rgb(223, 222, 221);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
+  width: 96.2%;
   padding: 10px 30px;
   margin: auto;
 }
@@ -21,7 +28,7 @@
 
 #navbar a {
   text-decoration: none;
-}
+  }
 
 @media only screen and (max-width: 650px) {
   #mid {
@@ -33,10 +40,9 @@
   padding: 0px 2px;
   text-align: center;
   color: #79747c;
-  font-family: Assistance,Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 #end img {
@@ -53,8 +59,11 @@
 #fotter {
   display: flex;
   justify-content: space-between;
-  margin: 10px 55px;
+  padding: 10px 55px;
+  margin-bottom: 0px;
   align-items: center;
+  border: 1px solid rgb(223, 222, 221);
+  position: sticky;
 }
 @media only screen and (max-width: 500px) {
   #fotter {
@@ -88,3 +97,45 @@
   }
 }
 /* <---End---> */
+
+/* <-------------- INVOICE PART STYLING-------------- */
+#Total_Pri {
+  width: 30%;
+  border-left: 1px solid rgb(230, 227, 227);
+  margin-top: 50px;
+  color: #424553;
+ }
+
+#Total_Pri p {
+  padding: 10px 0px 10px;
+}
+
+#Total_Pri>div {
+  margin-left: 55px;
+}
+
+#Total_Pri button {
+  font-weight: 700;
+  font-size: 19px;
+  padding-left: 10px;
+  background: none;
+  border: none;
+}
+
+#Pri_Cal>div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+#Final_Cal {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(230, 227, 227);
+  font-weight: 700;
+  font-size: 16px;
+}

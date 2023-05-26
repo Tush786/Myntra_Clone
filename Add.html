@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="Common.css" />
   <link rel="stylesheet" href="Add.css" />
@@ -31,7 +31,6 @@
       <a href="./Payment.html">
         <h4>PAYMENT</h4>
       </a>
-
     </div>
     <div id="end">
       <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="logo" />
@@ -41,35 +40,45 @@
     </div>
   </div>
 
-  <!-- Select Address -->
+  <!------------------ Select Address -------------------->
   <div id="Add_Sec">
     <div id="Left">
-      <div id="Top">
-        <h2>Select Delivery Address</h2>
-        <button>ADD NEW ADDRESS</button>
-      </div>
       <div>
         <form id="Add" accept="#">
           <h3>CONTACT DETAILS</h3>
-          <input type="text" placeholder="Name" id="name" required>
-          <input type="number" placeholder="Mobile Number" id="number" required>
+          <input type="text" placeholder="Name" id="name" required />
+          <input type="number" placeholder="Mobile Number" id="number" required />
           <h3>ADDRESS</h3>
-          <input type="number" placeholder="Pin Code*" id="Pin" required>
-          <input type="text" placeholder="Addres(house no,Building,Street,Area)*" id="Address" type="text" required >
-          <input type="text" placeholder="Locality/Town*" id="Town" required>
+          <input type="number" placeholder="Pin Code*" id="Pin" required />
+          <input type="text" placeholder="Addres(house no,Building,Street,Area)*" id="Address" type="text" required />
+          <input type="text" placeholder="Locality/Town*" id="Town" required />
           <div id="Di_St">
-            <input   placeholder="City/District*" id="City" type="text"  required>
-            <input  placeholder="State*" id="State"  type="text"  required>
+            <input placeholder="City/District*" id="City" type="text" required />
+            <input placeholder="State*" id="State" type="text" required />
           </div>
           <div id="Submit">
-          <input type="submit" onclick="Submit_Add()" >
-        </div>
+            <input type="submit" onclick="Submit_Add()" />
+          </div>
         </form>
-
       </div>
-      <div id="Container"></div>
+      <div id="Main_Cont">
+        <div id="Container">
+          <div id="Top">
+            <h2>Select Delivery Address</h2>
+            <button>ADD NEW ADDRESS</button>
+          </div>
+          <div id="A"></div>
+        </div>
+      </div>
     </div>
     <div id="Total_Pri">
+      <p style="padding: 0px 55px 30px" id="Est">DELIVERY ESTIMATES</p>
+      <div id="show_order">
+        <img src="https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg?auto=compress&cs=tinysrgb&w=600" />
+
+        <p>Estimated Delivery by</p>
+        <p id="date"><b>30-12-2023</b></p>
+      </div>
       <div>
         <h4>PRICE DETAILS(1 item)</h4>
         <div id="Pri_Cal">

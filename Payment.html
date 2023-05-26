@@ -1,199 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Myntra_Clone</title>
-    <script src="https://kit.fontawesome.com/72215895a8.js"></script>
-    <link rel="stylesheet" href="Payment.css" />
-    <link rel="stylesheet" href="Common.css" />
-  </head>
-  <body>
-    <div id="navbar">
-      <div id="logo">
-        <img src="https://bit.ly/3LDsXgz" />
-      </div>
-      <div id="mid">
-        <a href="./Bag.html">
-          <h4>BAG</h4>
-        </a>
 
-        <h4>-----------</h4>
-        <a href="./Add.html">
-          <h4>ADDRESS</h4>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Myntra_Clone</title>
+  <script src="https://kit.fontawesome.com/72215895a8.js"></script>
+  <link rel="stylesheet" href="Payment.css" />
+  <link rel="stylesheet" href="Common.css" />
+</head>
 
-        <h4>-----------</h4>
-
-        <a href="./Payment.html">
-          <h4>PAYMENT</h4>
-        </a>
-      </div>
-      <div id="end">
-        <img
-          src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"
-          alt="logo"
-        />
-        <h4><p>100 % SECURE</p></h4>
-      </div>
+<body>
+  <div id="navbar">
+    <div id="logo">
+      <img src="https://bit.ly/3LDsXgz" />
     </div>
-    <div style="border: 1px solid rgb(221, 220, 219)">
-      <div id="Pay">
-        <div id="Mid_Por">
-          <div id="offer">
-            <div>
-              <span
-                ><img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFh7c-M58IicBR0bVevCR9eHqafzf0dkbnFg&usqp=CAU"
-                  height="20px"
-                  width="20px"
-              /></span>
-              <h3>Bank Offer</h3>
-            </div>
+    <div id="mid">
+      <a href="./Bag.html">
+        <h4>BAG</h4>
+      </a>
 
-            <p>
-              10% Instant Discount with Standard Chartered Credit & Debit cards
-              on a min spend of Rs 3,000. TCA
-            </p>
-          </div>
-          <div style="border: none">
-            <h3>Choose Payment Mode</h3>
-          </div>
-          <!-- Choose Payment Method -->
-          <div id="MID">
-            <div id="Pay_opt">
-              <div id="op1">
-                <i class="fa-sharp fa-regular fa-star"></i>
-                <p>Recommended</p>
-              </div>
-              <div id="op2">
-                <i class="fa-brands fa-amazon-pay"></i>
-                <p>Cash On Delivery (Cash/Card/UPI)</p>
-              </div>
-              <div id="op3">
-                <i class="fa-solid fa-credit-card"></i>
-                <p>Credit/Debit Card</p>
-              </div>
-              <div id="op4">
-                <i class="fa-brands fa-cc-amazon-pay"></i>
-                <p>PhonePe/Google Pay/ BHIM UPI</p>
-              </div>
-              <div id="op5">
-                <i class="fa-solid fa-wallet"></i>
-                <p>Paytm/Wallet</p>
-              </div>
-              <div id="op6">
-                <i class="fa-solid fa-building-columns"></i>
-                <p>Net Banking</p>
-              </div>
-            </div>
-            <!-- Payment Section Show Here After Selection Payment method -->
-            <div id="Slt_Pay"></div>
-          </div>
+      <h4>-----------</h4>
+      <a href="./Add.html">
+        <h4>ADDRESS</h4>
+      </a>
 
-          <!-- Add Gift Card -->
-          <div id="Gift_Card">
-            <div>
-              <i class="fa-solid fa-gift"></i>
-              <h3>Have a Gift Card</h3>
-            </div>
-            <button>APPLY GIFT CARD</button>
-          </div>
-        </div>
-        <div id="Total_Pri">
+      <h4>-----------</h4>
+
+      <a href="./Payment.html">
+        <h4 id="P">PAYMENT</h4>
+      </a>
+    </div>
+    <div id="end">
+      <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="logo" />
+      <h4>
+        <p>100 % SECURE</p>
+      </h4>
+    </div>
+  </div>
+  <div id="Succ" style="border: 1px solid rgb(221, 220, 219)">
+    <div id="Pay">
+      <div id="Mid_Por">
+        <div id="offer">
           <div>
-            <h4>PRICE DETAILS(1 item)</h4>
-            <div id="Pri_Cal">
-              <div>
-                <p>Total MRP</p>
-                <p id="TP">0</p>
-              </div>
-              <div>
-                <p>Discount on MRP</p>
-                <p id="DP">0</p>
-              </div>
-              <div>
-                <p>Convenience Fee <button>Know More</button></p>
-                <p id="Con_Fee">-99</p>
-              </div>
-            </div>
+            <span><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFh7c-M58IicBR0bVevCR9eHqafzf0dkbnFg&usqp=CAU"
+                height="20px" width="20px" /></span>
+            <h3>Bank Offer</h3>
+          </div>
 
-            <div id="Final_Cal">
-              <p>Total MRP</p>
-              <p id="Final_Pri">0</p>
+          <p>
+            10% Instant Discount with Standard Chartered Credit & Debit cards
+            on a min spend of Rs 3,000. TCA
+          </p>
+        </div>
+        <div style="border: none">
+          <h3>Choose Payment Mode</h3>
+        </div>
+        <!-- Choose Payment Method -->
+        <div id="MID">
+          <div id="Pay_opt">
+            <div id="op1">
+              <i class="fa-sharp fa-regular fa-star"></i>
+              <p>Recommended</p>
+            </div>
+            <div id="op2">
+              <i class="fa-brands fa-amazon-pay"></i>
+              <p>Cash On Delivery (Cash/Card/UPI)</p>
+            </div>
+            <div id="op3">
+              <i class="fa-solid fa-credit-card"></i>
+              <p>Credit/Debit Card</p>
+            </div>
+            <div id="op4">
+              <i class="fa-brands fa-cc-amazon-pay"></i>
+              <p>PhonePe/Google Pay/ BHIM UPI</p>
+            </div>
+            <div id="op5">
+              <i class="fa-solid fa-wallet"></i>
+              <p>Paytm/Wallet</p>
+            </div>
+            <div id="op6">
+              <i class="fa-solid fa-building-columns"></i>
+              <p>Net Banking</p>
             </div>
           </div>
+          <!-- Payment Section Show Here After Selection Payment method -->
+          <div id="Slt_Pay"></div>
         </div>
-      </div>
-    </div>
 
-    <!-- Footer Section -->
-    <div id="fotter">
-      <div id="Mod_Pay">
-        <div>
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png"
-            alt="visa"
-          />
-        </div>
-        <div>
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png"
-            alt="Master Card"
-          />
-        </div>
-        <div>
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png"
-            alt="American Exp"
-          />
-        </div>
-        <div>
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png"
-            alt="Diner Club International"
-          />
-        </div>
-        <div>
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png"
-            alt="Net Banking"
-          />
-        </div>
-        <div>
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png"
-            alt="Cash On Delivery"
-          />
-        </div>
-        <div>
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png"
-            alt="RupCard"
-          />
-        </div>
-        <div>
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png"
-            alt="Pay Pal"
-          />
-        </div>
-        <div>
-          <img
-            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png"
-            alt="BHIM UPI"
-          />
+        <!-- Add Gift Card -->
+        <div id="Gift_Card">
+          <div>
+            <i class="fa-solid fa-gift"></i>
+            <h3>Have a Gift Card</h3>
+          </div>
+          <button>APPLY GIFT CARD</button>
         </div>
       </div>
-      <h3>Need Help ? Contact Us</h3>
+      <div id="Total_Pri">
+              
+        <div>
+          <h4>PRICE DETAILS(1 item)</h4>
+          <div id="Pri_Cal">
+            <div>
+              <p>Total MRP</p>
+              <p id="TP">0</p>
+            </div>
+            <div>
+              <p>Discount on MRP</p>
+              <p id="DP">0</p>
+            </div>
+            <div>
+              <p>Convenience Fee <button>Know More</button></p>
+              <p id="Con_Fee">-99</p>
+            </div>
+          </div>
+  
+          <div id="Final_Cal">
+            <p>Total MRP</p>
+            <p id="Final_Pri">0</p>
+          </div>
+          </div>
+      </div>
     </div>
-  </body>
-  <script src="Payment.js"></script>
+  </div>
+  <div id="Show"></div>
+
+  <!-- Footer Section -->
+  <div id="fotter">
+    <div id="Mod_Pay">
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png" alt="" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png" alt="visa" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png" alt="Master Card" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png" alt="American Exp" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png"
+          alt="Diner Club International" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png" alt="Net Banking" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png" alt="Cash On Delivery" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png" alt="RupCard" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png" alt="Pay Pal" />
+      </div>
+      <div>
+        <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png" alt="BHIM UPI" />
+      </div>
+    </div>
+    <h3>Need Help ? Contact Us</h3>
+  </div>
+</body>
+<script src="Payment.js"></script>
+
 </html>

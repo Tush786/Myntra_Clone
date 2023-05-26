@@ -2,11 +2,13 @@
 document.getElementById("op3").addEventListener("click", Deb_Cred);
 document.getElementById("op4").addEventListener("click", Payment);
 
+
 // <--- Pay Through Credit/Debit Card--->
 function Deb_Cred() {
   event.preventDefault();
-  var ID=document.getElementById("op3");
-  ID.style.background="white"
+
+    var ID = document.getElementById("op3");
+  ID.style.background = "white";
   var T_Div = document.createElement("div");
   T_Div.setAttribute("class", "T_Div");
 
@@ -27,22 +29,22 @@ function Deb_Cred() {
   CN.setAttribute("type", "text");
   CN.setAttribute("placeholder", "Card Number");
   CN.setAttribute("id", "C_N");
-  CN.setAttribute("maxlength","16")
+  CN.setAttribute("maxlength", "16");
 
   var Name = document.createElement("input");
-  Name.setAttribute("id","Name_Card")
+  Name.setAttribute("id", "Name_Card");
   Name.setAttribute("type", "text");
   Name.setAttribute("placeholder", "Name On Card");
 
   var Div = document.createElement("div");
   var Val = document.createElement("input");
   Val.setAttribute("placeholder", "Valid Thru(MM/YY)");
-  Val.setAttribute("id","Set_Date")
+  Val.setAttribute("id", "Set_Date");
   Val.setAttribute("type", "month");
   Val.setAttribute("id", "start");
   Val.setAttribute("name", "start");
   Val.setAttribute("min", "2018-03");
-  Val.setAttribute("value", "2018-05");
+  Val.setAttribute("value", "2035-05");
 
   Val.style.width = "270px";
   Val.style.fontFamily = " sans-serif";
@@ -51,7 +53,7 @@ function Deb_Cred() {
   CVV.setAttribute("id", "cvv");
   CVV.setAttribute("type", "text");
   CVV.setAttribute("placeholder", "CVV");
-  CVV.setAttribute("maxlength","3")
+  CVV.setAttribute("maxlength", "3");
   CVV.style.width = "110px";
 
   Div.append(Val, CVV);
@@ -67,8 +69,7 @@ function Deb_Cred() {
   form.append(CN, Name, Div, btn);
   document.getElementById("Slt_Pay").append(T_Div, form);
 
-  
-}
+  }
 
 // <--- Generate OTP Functionallity here--->
 // <--- OTP Submition Form--->
@@ -79,18 +80,16 @@ function Pay_Now(X) {
     otp += Math.floor(Math.random() * 10);
   }
   var OTP = Number(otp);
-  if(Card_No==""||Ca_Name==""||date==""||CVV=="")
-  {
-    alert("Fill Field")
-  }
-  else{
+  if (Card_No == "" || Ca_Name == "" || date == "" || CVV == "") {
+    alert("Fill Field");
+  } else {
     alert("OTP:-" + OTP);
   }
   // <-- Generate OTP-->
 
   var H = document.createElement("h2");
   H.textContent = "Enter OTP";
-  H.style.paddingTop="25px"
+  H.style.paddingTop = "25px";
   var form = document.createElement("form");
   form.setAttribute("id", "OTP_Form");
 
@@ -98,7 +97,7 @@ function Pay_Now(X) {
 
   var In1 = document.createElement("input");
   In1.setAttribute("id", "In1");
-  In1.setAttribute("type","text")
+  In1.setAttribute("type", "text");
 
   var In2 = document.createElement("input");
   In2.setAttribute("id", "In2");
@@ -125,19 +124,17 @@ function Pay_Now(X) {
   form.append(H, Div, btn);
   document.getElementById("Slt_Pay").append(form);
 
-  var Card_No=document.getElementById("C_N").value;
-  var Ca_Name=document.getElementById("Name_Card").value;
-  var date=document.getElementById("Set_Date").value;
-  var CVV=document.getElementById("cvv").value;
-  if(Card_No==""||Ca_Name==""||date==""||CVV=="")
-  {
-    alert("input")
+  var Card_No = document.getElementById("C_N").value;
+  var Ca_Name = document.getElementById("Name_Card").value;
+  var date = document.getElementById("Set_Date").value;
+  var CVV = document.getElementById("cvv").value;
+  if (Card_No == "" || Ca_Name == "" || date == "" || CVV == "") {
+    alert("input");
   }
 
   // <------- Display None Credit Card Form------->
-  var FORM=document.getElementById("Slt_Pay");
-  FORM.style.display="None"
- 
+  var FORM = document.getElementById("Slt_Pay");
+  FORM.style.display = "None";
 }
 // <----End---->
 
@@ -153,16 +150,22 @@ function Verify_OTP(otp) {
   St = OT1 + OT2 + OT3 + OT4;
   console.log(St);
 
+  // <-------- Order Is SuccessFully Completed--------->
   if (St === otp) {
-    alert("Payment Successful");
+    var Land_Page = document.createElement("img");
+    Land_Page.setAttribute(
+      "src",
+      "https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&w=600"
+    );
+    Land_Page.style.width = "100%";
+    document.getElementById("Show").append(Land_Page);
+    var Pay = document.getElementById("Succ");
+    Pay.style.display = "None";
   } else {
     alert("Please Check OTP");
   }
-
-   var Payment=document.getElementById("P");
-  Payment.style.color="white"
 }
-// <--- End--->
+// <---------------- End -------------->
 
 // <--- Pay Through Phone Pay Google Pay Bhim UPI--->
 function Payment() {
@@ -172,9 +175,9 @@ function Payment() {
   H.textContent = "PhonePe/Google Pay/ BHIM UPI";
 
   var form = document.createElement("form");
+  form.setAttribute("id", "Online");
 
-  var div1 = document.createElement("div");
-
+  var DIV1 = document.createElement("div");
   var x1 = document.createElement("INPUT");
   x1.setAttribute("type", "radio");
 
@@ -184,13 +187,16 @@ function Payment() {
     "https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/phonepe-logo-icon.svg"
   );
 
+  DIV1.append(x1, img1);
+
+  var div1 = document.createElement("div");
+
   var P1 = document.createElement("p");
   P1.textContent = "Pay Through";
+  div1.append(DIV1, P1);
+  // <----------------------End?
 
-  div1.append(x1, img1, P1);
-
-  var div2 = document.createElement("div");
-
+  var DIV2 = document.createElement("div");
   var x2 = document.createElement("INPUT");
   x2.setAttribute("type", "radio");
 
@@ -200,13 +206,15 @@ function Payment() {
     "https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/google-pay-icon.svg"
   );
 
+  DIV2.append(x2, img2);
+  var div2 = document.createElement("div");
   var P2 = document.createElement("p");
   P2.textContent = "Pay Through";
 
-  div2.append(x2, img2, P2);
+  div2.append(DIV2, P2);
+  // <----------------------End?
 
-  var div3 = document.createElement("div");
-
+  var DIV3 = document.createElement("div");
   var x3 = document.createElement("INPUT");
   x3.setAttribute("type", "radio");
 
@@ -216,16 +224,16 @@ function Payment() {
     "https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/upi-payment-icon.svg"
   );
 
+  DIV3.append(x3, img3);
+  var div3 = document.createElement("div");
+
   var P3 = document.createElement("p");
   P3.textContent = "Pay Through";
+  div3.append(DIV3, P3);
 
-  div3.append(x3, img3, P3);
+  // <----------------------End?
 
-  var btn = document.createElement("input");
-  btn.setAttribute("type", "submit");
-  btn.style.width = "230px";
-
-  form.append(H, div1, div2, div3, btn);
+   form.append(H, div1, div2, div3);
   document.getElementById("Slt_Pay").append(form);
 }
 

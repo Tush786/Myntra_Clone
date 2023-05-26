@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 #Add_Sec {
   width: 90%;
   margin: auto;
@@ -6,32 +12,24 @@
 }
 
 #Left {
-  width: 53.5%;
+  margin-top: 50px;
+  margin-right: 60px;
+  width: 55%;
 }
 
-#Left > div {
-  border: 1px solid rgb(223, 222, 221);
+#Left+div {
   margin-bottom: 10px;
 }
 
-#Left #Top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid rgb(223, 222, 221);
-  padding: 0px 10px;
-}
-
-#Top button {
-  width: 150px;
-  height: 30px;
-}
+/* <--------------- Address Input filled------------> */
 #Add {
   width: 100%;
+  border: 1px solid rgb(223, 222, 221);
 }
 
-#Add > h3 {
+#Add>h3 {
   padding-left: 12px;
+  padding: 25px 0px 20px 10px;
 }
 
 #Add input {
@@ -41,141 +39,163 @@
   border-radius: 10px;
   margin: auto;
   width: 90%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 18px;
   border: 1px solid rgb(223, 222, 221);
 }
 
 #Add div {
   display: flex;
-  width: 95%;
+  width: 94.5%;
   margin: auto;
 }
 
-#Add > div input {
+#Add>div input {
   padding: 20px 10px;
   margin: 0px 8px;
-  border: 1px solid rgb(223, 222, 221);
 }
 
 #Left h3 {
   margin-left: 20px;
+  font-size: 16px;
+  font-weight: 1000;
 }
 
 #Add #Submit {
   width: 100%;
-   margin-top: 20px;
+  margin-top: 20px;
   justify-content: center;
   box-shadow: rgba(90, 88, 88, 0.35) 5px 0px 10px;
   padding: 10px 0px;
   border: 1px solid rgb(223, 222, 221);
- 
 }
 
-#Add #Submit input{
+#Add #Submit input {
   padding: 20px 48%;
   background-color: #ff3f6c;
   color: white;
   font-size: 16px;
-   font-weight: 600;
-   border-radius: 8px;
-   font-family: Assistance, Helvetica, sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
 }
 
 #Right {
   width: 50%;
-  border: 1px solid;
-  height: 100%;
 }
 
 #Container {
   width: 100%;
   height: auto;
- }
+}
 
-#Container>div{
-    border: 1px solid rgb(223, 222, 221);
-    padding: 30px;
-    color: #79747c;
-  font-size: 18px;
-  font-weight: 700;
+#Container button {
+  width: 120px;
+  padding: 10px 0px;
+  margin: 20px 20px 0px 0px;
+  background: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
   font-family: Assistance, Helvetica, sans-serif;
 }
 
-#Container button{
-   width: 120px;
-   padding: 10px 20px;
-   margin-right: 20px;
-   background: none;
-   font-size: 16px;
-   font-weight: 600;
-   border-radius: 5px;
-   font-family: Assistance, Helvetica, sans-serif;
+#Container>div {
+  color: #79747c;
+  font-size: 18px;
+  font-weight: 700;
 }
 
-#Total_Pri {
-    width: 30%;
-    border-left: 1px solid rgb(230, 227, 227);
-    padding-top: 20px;
-    color: #424553;
-  }
-  
-  #Total_Pri p {
-    padding: 10px 0px 10px;
-  }
-  
-  #Total_Pri > div {
-    margin-left: 55px;
-  }
-  
-  #Total_Pri button {
-    font-family: Assistace, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    padding-left: 10px;
-    background: none;
-    border: none;
-  }
-  
-  #Pri_Cal > div {
-    display: flex;
-    justify-content: space-between;
-    font-family: Assistace, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 10px;
-  }
-  
-  #Final_Cal {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid rgb(230, 227, 227);
-    font-family: Assistace, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    align-items: center;
-  }
+#Container #Top {
+  display: flex;
+  border: 1px solid rgb(223, 222, 221);
+}
 
-  #Conti{
-    padding: 10px 30px;
-    background-color: #ff3f6c;
-    color: white;
-    /* width: 90%; */
-    text-align: center;
-    border-radius: 5px;
-    margin: auto;
-  }
+#Container p {
+  padding: 15px 0px 0px;
+}
 
-  #Conti a{
-    text-decoration: none;
-  }
+#Top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border: 1px solid;
+  border: 1px solid rgb(223, 222, 221);
+}
 
-  #Conti h4{
-    color: white;
-    font-family: Assistace, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 16px;
-  }
+#Top button {
+  width: 200px;
+  height: 50px;
+  background: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #79747c;
+  margin: 20px 0px 20px;
+}
 
+#A>div {
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 10px 50px 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* -------------Show order above Invoice ------------- */
+#show_order {
+  display: flex;
+  width: auto;
+  align-items: center;
+  border-bottom: 1px solid rgb(230, 227, 227);
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+#show_order img {
+  width: 60px;
+  height: 80px;
+  margin-right: 70px;
+  
+}
+
+#show_order p {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+
+
+/* <--------- Invoice Section Styling -------------> */
+
+
+@media only screen and (max-width: 500px) {
+  #Pri_Cal>div {
+    flex-direction: column;
+  }
+}
+
+
+
+/* <-------------- Address Container Styling-------------> */
+
+#Conti {
+  padding: 10px 30px;
+  background-color: #ff3f6c;
+  color: white;
+  /* width: 90%; */
+  text-align: center;
+  border-radius: 5px;
+  margin: auto;
+}
+
+#Conti a {
+  text-decoration: none;
+}
+
+#Conti h4 {
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+}
