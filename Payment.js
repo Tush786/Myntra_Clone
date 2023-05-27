@@ -2,21 +2,21 @@
 document.getElementById("op3").addEventListener("click", Deb_Cred);
 document.getElementById("op4").addEventListener("click", Payment);
 
-
 // <--- Pay Through Credit/Debit Card--->
 function Deb_Cred() {
   event.preventDefault();
 
-    var ID = document.getElementById("op3");
+  var ID = document.getElementById("op3");
   ID.style.background = "white";
   var T_Div = document.createElement("div");
   T_Div.setAttribute("class", "T_Div");
 
   var h = document.createElement("h2");
   h.textContent = "CREDIT/DEBIT CARD";
-  h.style.padding = "0px 0px 5px";
+  h.style.margin = "0px 0px 5px 10px";
 
   var P = document.createElement("p");
+  P.style.margin = "0px 0px 5px 10px";
   P.textContent =
     "Please ensure your card can be used for online transactions.";
 
@@ -68,8 +68,7 @@ function Deb_Cred() {
   });
   form.append(CN, Name, Div, btn);
   document.getElementById("Slt_Pay").append(T_Div, form);
-
-  }
+}
 
 // <--- Generate OTP Functionallity here--->
 // <--- OTP Submition Form--->
@@ -139,9 +138,10 @@ function Pay_Now(X) {
 // <----End---->
 
 // <--- Submit OTP--->
+
 function Verify_OTP(otp) {
   event.preventDefault();
- 
+
   var St = "";
   var OT1 = document.getElementById("In1").value;
   var OT2 = document.getElementById("In2").value;
@@ -155,7 +155,7 @@ function Verify_OTP(otp) {
     var Land_Page = document.createElement("img");
     Land_Page.setAttribute(
       "src",
-      "https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "https://magecomp.com/blog/wp-content/uploads/2017/10/How-to-Send-Order-Confirmation-Email-to-Customers-after-Successful-Payment-in-Magento-2.png"
     );
     Land_Page.style.width = "100%";
     document.getElementById("Show").append(Land_Page);
@@ -233,7 +233,7 @@ function Payment() {
 
   // <----------------------End?
 
-   form.append(H, div1, div2, div3);
+  form.append(H, div1, div2, div3);
   document.getElementById("Slt_Pay").append(form);
 }
 

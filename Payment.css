@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -18,25 +18,22 @@
   display: flex;
   width: 95%;
   margin: auto;
-  /* margin-top: 20px; */
-}
+ }
 
 #Mid_Por {
   width: 60%;
   padding-right: 50px;
-
-  border: #79747c;
   margin-top: 30px;
 }
 
-#Mid_Por>div {
+#Mid_Por > div {
   border: 1px solid rgb(230, 227, 227);
   margin: 20px 5px;
   display: flex;
 }
 
-#Pay_opt>div {
-  padding: 43px 0px;
+#Pay_opt > div {
+  padding: 46px 0px;
   display: flex;
   align-items: center;
   background: #f5f5f5;
@@ -49,14 +46,14 @@
   border: 1px solid rgb(230, 227, 227);
 }
 
-#Pay_opt>div {
+#Pay_opt > div {
   border: 1px solid rgb(237, 235, 235);
   font-weight: 700;
   font-size: 18px;
   height: auto;
 }
 
-#Pay_opt>div i {
+#Pay_opt > div i {
   margin: 10px;
 }
 
@@ -66,12 +63,12 @@
   border: 1px solid rgb(230, 227, 227);
 }
 
-#offer>div {
+#offer > div {
   display: flex;
   align-items: center;
 }
 
-#offer>div img {
+#offer > div img {
   padding: 0px 10px 0 0px;
 }
 
@@ -84,7 +81,6 @@
 
 /* <-------------- Total Calculation with  Invoice-------------> */
 
-
 @media only screen and (max-width: 500px) {
   #Final_Cal {
     flex-direction: column;
@@ -95,7 +91,7 @@
 
 /*<---Styling for  Credit card and Debit Card choose payment section --->*/
 
-form>div {
+form > div {
   display: flex;
   align-items: center;
   padding: 20px 10px;
@@ -117,13 +113,13 @@ form img {
 }
 
 input {
-  padding: 20px 0px 20px 10px;
+  padding: 25px 0px 25px 10px;
   margin: 10px;
   border-radius: 5px;
   border: 1px solid rgb(221, 220, 219);
 }
 
-#Pay_form>div {
+#Pay_form > div {
   margin: -15px 0px;
   margin-left: -10px;
   margin-right: -10px;
@@ -152,7 +148,7 @@ input {
   border-radius: 5px;
 }
 
-#fOnline>div {
+#fOnline > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,18 +165,18 @@ input {
   color: #424553;
 }
 
-#Gift_Card>div {
+#Gift_Card > div {
   display: flex;
   align-items: center;
 }
 
 @media only screen and (max-width: 650px) {
-  #Gift_Card>div {
+  #Gift_Card > div {
     flex-direction: column;
   }
 }
 
-#Gift_Card>div h3 {
+#Gift_Card > div h3 {
   margin-left: 10px;
 }
 
@@ -200,7 +196,7 @@ input {
   color: #424553;
 }
 
-#OTP_Form>div {
+#OTP_Form > div {
   display: flex;
   justify-content: center;
 }
@@ -227,3 +223,4 @@ input {
 }
 
 /* <----------------OTP page styling part End here End----------------> */
+
