@@ -53,9 +53,14 @@ function Display_Add(Arr) {
     var Main_Div = document.createElement("div");
     Main_Div.setAttribute("id", "Sub_Cont");
 
+
     var H1 = document.createElement("h3");
     H1.textContent = el.Name;
-    H1.style.fontWeight = "800";
+    H1.style.fontWeight = "1200";
+
+    console.log(el.name);
+  
+    H1.style.fontSize="18px"
     H1.style.color = "Black";
     H1.style.marginLeft = "0px";
     console.log(H1);

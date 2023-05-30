@@ -6,8 +6,6 @@ document.getElementById("op4").addEventListener("click", Payment);
 function Deb_Cred() {
   event.preventDefault();
 
-  var ID = document.getElementById("op3");
-  ID.style.background = "white";
   var T_Div = document.createElement("div");
   T_Div.setAttribute("class", "T_Div");
 
@@ -46,7 +44,7 @@ function Deb_Cred() {
   Val.setAttribute("min", "2018-03");
   Val.setAttribute("value", "2035-05");
 
-  Val.style.width = "270px";
+  Val.style.width = "290px";
   Val.style.fontFamily = " sans-serif";
 
   var CVV = document.createElement("input");
@@ -54,7 +52,7 @@ function Deb_Cred() {
   CVV.setAttribute("type", "text");
   CVV.setAttribute("placeholder", "CVV");
   CVV.setAttribute("maxlength", "3");
-  CVV.style.width = "110px";
+  CVV.style.width = "150px";
 
   Div.append(Val, CVV);
 
@@ -63,6 +61,9 @@ function Deb_Cred() {
   btn.setAttribute("class", "Pay_Now");
   btn.setAttribute("type", "submit");
   btn.textContent = "PAY NOW";
+  btn.addEventListener("click", function () {
+    Inp_Fill();
+  });
   btn.addEventListener("click", function () {
     Pay_Now(4);
   });
@@ -79,15 +80,31 @@ function Pay_Now(X) {
     otp += Math.floor(Math.random() * 10);
   }
   var OTP = Number(otp);
-  if (Card_No == "" || Ca_Name == "" || date == "" || CVV == "") {
-    alert("Fill Field");
-  } else {
-    alert("OTP:-" + OTP);
-  }
-  // <-- Generate OTP-->
 
+  // <-------------  Pop_up Functionallity ------------->
+
+  var PUP1 = document.createElement("div");
+  PUP1.setAttribute("id", "PUP1");
+
+  var btn = document.createElement("button");
+  btn.textContent = "X";
+  btn.addEventListener("click", Hidden);
+  btn.setAttribute("type", "button");
+  btn.setAttribute("class", "btn");
+  var P = document.createElement("p");
+  P.textContent = "OTP is sent to Your Mobile Number";
+
+  var Otp = document.createElement("p");
+  Otp.textContent = "OTP:-" + " " + Number(otp);
+
+  PUP1.append(btn, P, Otp);
+  document.querySelector("#Pop_up").append(PUP1);
+
+  // <---------- Pop Functionality End Here------------->
+
+  // <-- Generate OTP-->
   var H = document.createElement("h2");
-  H.textContent = "Enter OTP";
+  H.textContent = "Verify OTP";
   H.style.paddingTop = "25px";
   var form = document.createElement("form");
   form.setAttribute("id", "OTP_Form");
@@ -96,7 +113,6 @@ function Pay_Now(X) {
 
   var In1 = document.createElement("input");
   In1.setAttribute("id", "In1");
-  In1.setAttribute("type", "text");
 
   var In2 = document.createElement("input");
   In2.setAttribute("id", "In2");
@@ -135,9 +151,9 @@ function Pay_Now(X) {
   var FORM = document.getElementById("Slt_Pay");
   FORM.style.display = "None";
 }
-// <----End---->
+// <----------------------------End---------------------->
 
-// <--- Submit OTP--->
+// <--------------- Submit OTP--------------->
 
 function Verify_OTP(otp) {
   event.preventDefault();
@@ -159,10 +175,26 @@ function Verify_OTP(otp) {
     );
     Land_Page.style.width = "100%";
     document.getElementById("Show").append(Land_Page);
+
+    var PAY = document.getElementById("P");
+    PAY.style.color = "#abe6d9";
     var Pay = document.getElementById("Succ");
     Pay.style.display = "None";
   } else {
-    alert("Please Check OTP");
+    // <------ If OTP is InCorrect then throw Alert Msg-------------->
+    var PUP2 = document.createElement("div");
+    PUP2.setAttribute("id", "PUP2");
+
+    var btn = document.createElement("button");
+    btn.textContent = "X";
+    btn.addEventListener("click", ReOTP);
+    btn.setAttribute("type", "button");
+    btn.setAttribute("class", "btn");
+    var P = document.createElement("p");
+    P.textContent = "You have entered wrong code.Please try again";
+
+    PUP2.append(btn, P);
+    document.querySelector("#Pop_up").append(PUP2);
   }
 }
 // <---------------- End -------------->
@@ -255,7 +287,6 @@ function Total_Pri() {
   Arr.map(function (el) {
     Total += +el.Price;
   });
-  // console.log(Total)
 
   document.getElementById("TP").textContent = Total;
 
@@ -273,8 +304,20 @@ function Total_Pri() {
 
     var DP = (document.getElementById("DP").textContent = Total - X);
 
-    if (DP > 999) {
-      document.getElementById("Final_Pri").textContent = DP - 99;
+    if (DP < 999) {
+      document.getElementById("Final_Pri").textContent = DP + 99;
     }
   });
+}
+
+// <------ For Close the tab when OTP is check------------------>
+function Hidden() {
+  var Hide = document.getElementById("PUP1");
+  Hide.style.visibility = "hidden";
+}
+
+// <------ For Close the tab when OTP is Wrong------------------>
+function ReOTP() {
+  var Hide = document.getElementById("PUP2");
+  Hide.style.visibility = "hidden";
 }
