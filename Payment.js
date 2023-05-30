@@ -2,6 +2,23 @@
 document.getElementById("op3").addEventListener("click", Deb_Cred);
 document.getElementById("op4").addEventListener("click", Payment);
 
+// <------------- JS For Show More Offer--------------->
+const Readmorebtn=document.querySelector(".show_more_btn");
+const text=document.querySelector(".Text");
+
+Readmorebtn.addEventListener("click",(e)=>{
+    text.classList.toggle("Show_more")
+    if( Readmorebtn.textContent=="Show More")
+    {
+        Readmorebtn.textContent="Show Less"
+    }
+    else{
+        Readmorebtn.textContent="Show More"
+    }
+});
+// <------------
+
+
 // <--- Pay Through Credit/Debit Card--->
 function Deb_Cred() {
   event.preventDefault();

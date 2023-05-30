@@ -8,6 +8,46 @@
   margin: 0px;
 }
 
+/* <------------ Show More Offer-------------> */
+
+.Text{
+  font-size: 18px;
+  }
+
+.Text,i{
+  font-size: 18px;
+  line-height: 30px;
+  padding-right: 5px;
+  color: #424553;
+}
+
+.Text i{
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.more_text{
+  display: none;
+}
+
+.show_more_btn{
+  padding: 10px 20px;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  width: 200px;  
+margin-left: -55px;
+}
+
+.Show_more .more_text{
+  display: inline;
+}
+/* <---------- Show More offer Styling  End Here-----------> */
+
 /* <------------------- Payment Option Styling----------------> */
 #MID {
   border: 10px solid;
@@ -18,6 +58,7 @@
   display: flex;
   width: 95%;
   margin: auto;
+  
  }
 
 #Mid_Por {
@@ -33,7 +74,7 @@
 }
 
 #Pay_opt > div {
-  padding: 48px 0px;
+  padding: 53px 0px;
   display: flex;
   align-items: center;
   background: #f5f5f5;
