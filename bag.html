@@ -16,7 +16,7 @@
       />
 
       <div class="center">
-        <p style="color: green">BAG --------</p>
+        <p style="color: green"><b>BAG</b> --------</p>
         <p>ADDRESS --------</p>
         <p>PAYMENT</p>
       </div>
@@ -34,7 +34,7 @@
       <div class="first" >
         <div class="f-1">
           <h4 class="p1">Check delivery time & services</h4>
-          <p class="p2">ENTER PIN CODE</p>
+          <h5 class="p2">ENTER PIN CODE</h5>
         </div>
         <div class="f-2">
           <h4 class="p3">Available Offers</h4>
@@ -42,16 +42,21 @@
             . Get up to Rs 500 Cashback on CRED pay on a min spend of Rs 1000.
             TCA</span
           >
-          <h4 style="color: red">Show more</h4>
+          <h4 style="color: #ff3f6c">Show more</h4>
         </div>
         <div class="f-3">
           <span class="f3span">
             Yay! <b>No convenience fee</b> on this order.</span
           >
         </div>
-
+           <div style="display: flex; justify-content: space-between; margin: 25px 15px;">
+            <div><span id="items">1 </span> <b>ITEMS SELECTED</b> </div>
+            <div> <span style="color:  black;">REMOVE       |   MOVE TO WISHLIST</span></div>
+           </div>
         <div class="itembox">
-          <div class="item">
+          
+ 
+          <div class="item" style="display: none;">
             <img
               src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/21249900/2023/1/6/8dd01d4c-f09b-46eb-9aa3-b937433b34701672984868659-Moda-Rapido-Men-Tshirts-2971672984868042-1.jpg"
               alt="item"
@@ -76,7 +81,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>  
+
+
+
         <div class="mfwishlist">
        
           <b>Add More From Wishlist</b> 
@@ -102,22 +110,22 @@
                </div>
                <div>
                     <button class="btn2" > &#8377;10</button><button class="btn2" >&#8377;50</button><button class="btn2" >&#8377;100</button>
-                    <h5 style="margin: 5px 15px; color: red;">Know More</h5>
+                    <h5 style="margin: 5px 15px; color: #ff3f6c;">Know More</h5>
                </div>
                <div>
                  <h5 style="margin-left: 15px;">PRICE DETAILS</h5>
               </div>
                <div class="priceDetails">
                 <h5 style="margin-left: 15px">Total MRP</h5>
-                <b style="margin-right: 10px;">&#8377;599</b>
+                <b style="margin-right: 10px;">&#8377; <span id="MRP2">599</span> </b>
               </div>
               <div class="priceDetails">
                 <h5 style="margin-left: 15px">Discount on MRP</h5>
-                <b style="margin-right: 10px; color: green;">-&#8377;360</b>
+                <b style="margin-right: 10px; color: green;">-&#8377; <span id="discOnMrp"></span> </b>
               </div>
               <div class="priceDetails">
                 <h5 style="margin-left: 15px">Coupon Discount </h5>
-                <b style="margin-right: 10px; color: red;">Apply Coupon</b>
+                <b style="margin-right: 10px; color: #ff3f6c;">Apply Coupon</b>
               </div>
               <div class="priceDetails">
                 <h5 style="margin-left: 15px">Convenience Fee</h5>
@@ -126,7 +134,7 @@
              
               <div class="TotalDetails">
                 <h4 style="margin-left: 15px">Total Amount</h4>
-                <b style="margin-right: 10px;">&#8377;229</b>
+                <b  style="margin-right: 10px;">&#8377; <span id="fp-2"></span> </b>
               </div>
                <button class="orderbtn">Place Order</button>
       </div>
@@ -179,3 +187,9 @@
     </div>
   </body>
 </html>
+
+
+
+
+
+<script src="bag.js"></script>
