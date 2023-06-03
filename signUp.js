@@ -44,13 +44,16 @@ document.querySelector("form").addEventListener("submit", myProfile)
             document.getElementById("btn3").style.border = "none";
             }
             if (password.length >= 8 && /[A-Z]/.test(password) && /\d/.test(password) && /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
-            window.location.href = "";
+
+                detailArr.push(detailObj)
+
+                localStorage.setItem("details", JSON.stringify(detailArr))
+                
+                window.location.href = "";
             }
         }
 
-        detailArr.push(detailObj)
-
-        localStorage.setItem("details", JSON.stringify(detailArr))
+        
 
         document.querySelector("#password").value = ""
         document.querySelector("#name").value = ""
