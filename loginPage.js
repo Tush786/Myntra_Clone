@@ -1,8 +1,8 @@
-document.querySelector("#btn").addEventListener("click", myAccount)
+document.querySelector("#btn").addEventListener("click", myAcc)
 
     var accArr = JSON.parse(localStorage.getItem("number"))||[]
 
-    function myAccount() {
+    function myAcc() {
         event.preventDefault()
         
         var accObj = {
@@ -18,7 +18,5 @@ document.querySelector("#btn").addEventListener("click", myAccount)
         }else{
             document.querySelector("#numDetail").textContent = "Please enter a valid mobile number(10 digits)"
         }
-
-        document.querySelector("#phone").value = ""
-        
+        document.querySelector("#phone").value = "" 
     }
