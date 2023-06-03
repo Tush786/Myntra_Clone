@@ -88,7 +88,7 @@ a{
 #shipping img{
     width: 100%;
 }
-#loginUp{
+#loginUP{
     width: 80%;
     margin-left: 10%;
     margin-top: 10%;
@@ -108,10 +108,10 @@ a{
     color: white;
     cursor: pointer;
 }
-#loginUp h5{
+#loginUP h5{
     color: rgb(165, 157, 157);
 }
-#loginUp h5 span{
+#loginUP h5 span{
     color: rgb(247, 74, 103);
 }
 @media only screen and (max-width: 500px) {
