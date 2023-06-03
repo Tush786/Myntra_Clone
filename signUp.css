@@ -85,6 +85,10 @@ a{
     margin-left: 35%;
     background-color: white;
 }
+#mobileNum{
+    font-size: small;
+    margin-top: -10px;
+}
 #sign{
     width: 80%;
     margin-left: 10%;
@@ -115,7 +119,7 @@ a{
 #gender{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 #gender div{
     display: flex;
