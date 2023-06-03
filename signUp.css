@@ -92,11 +92,11 @@ a{
 #sign > h3{
     padding-top: 10%;
 }
-#signNum{
+#signNumber{
     display: flex;
     justify-content: space-between;
 }
-#signNum img{
+#signNumber img{
     width: 8%;
     height: 8%;
     margin-top: 8%;
