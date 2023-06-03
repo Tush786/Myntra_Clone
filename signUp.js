@@ -60,9 +60,9 @@ document.querySelector("form").addEventListener("submit", myProfile)
 
     var mobile = JSON.parse(localStorage.getItem("number"))||[]
 
-    displayNum()
+    displayNumber()
 
-    function displayNum(){
+    function displayNumber(){
         mobile.map(function(elem){
             document.querySelector("#mobileNum").textContent = ""
 
