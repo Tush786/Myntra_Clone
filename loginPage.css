@@ -99,6 +99,10 @@ a{
     padding-bottom: 10px;
     padding-left: 20px;
 }
+#numDetail{
+    color: rgb(236, 37, 70);
+    font-size: small;
+}
 #btn{
     background-color: rgb(247, 74, 103);
     width: 100%;

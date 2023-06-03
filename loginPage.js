@@ -1,18 +1,23 @@
-document.querySelector("#btn").addEventListener("click", myAcc)
+document.querySelector("#btn").addEventListener("click", myAccount)
 
     var accArr = JSON.parse(localStorage.getItem("number"))||[]
 
-    function myAcc() {
+    function myAccount() {
         event.preventDefault()
-        var accObj = {
-            num: document.querySelector("#phone").value
-        }
-
-        accArr.push(accObj)
         
-        localStorage.setItem("number", JSON.stringify(accArr))
+        var accObj = {
+            num: document.querySelector("#phone").value 
+        } 
 
-        window.location.href = "loginOtp.html"
+        if(accObj.num.length === 10){
+            accArr.push(accObj)
+        
+            localStorage.setItem("number", JSON.stringify(accArr))
+
+            window.location.href = "loginOtp.html"
+        }else{
+            document.querySelector("#numDetail").textContent = "Please enter a valid mobile number(10 digits)"
+        }
 
         document.querySelector("#phone").value = ""
         
