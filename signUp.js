@@ -44,7 +44,7 @@ document.querySelector("form").addEventListener("submit", myProfile)
             document.getElementById("btn3").style.border = "none";
             }
             if (password.length >= 8 && /[A-Z]/.test(password) && /\d/.test(password) && /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
-            window.location.href = "loginPage.html";
+            window.location.href = "";
             }
         }
 
