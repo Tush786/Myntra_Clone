@@ -48,13 +48,11 @@ document.querySelector("form").addEventListener("submit", myProfile)
                 detailArr.push(detailObj)
 
                 localStorage.setItem("details", JSON.stringify(detailArr))
-                
+
                 window.location.href = "";
             }
         }
-
         
-
         document.querySelector("#password").value = ""
         document.querySelector("#name").value = ""
         document.querySelector("#email").value = ""
