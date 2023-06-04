@@ -284,16 +284,15 @@ function deleteData(ele, i) {
 }
 
 function getQty(qty, value, mrp, disc) {
-  let fp = qty.value * value;
+  let fp = qty.value * +value;
+  console.log(fp)
   document.getElementById("finalprice").textContent = fp;
-  let y = (document.getElementById("fp-2").textContent = fp + jugadFp - value);
+  let y = document.getElementById("fp-2").textContent = (+fp) + (+jugadFp) -(+value);
 
   let fmrp = qty.value * mrp;
   document.getElementById("MRP").textContent = fmrp;
-  let x = (document.getElementById("MRP2").textContent = fmrp + jugadMrp - mrp);
-   
-
-     
+  let x = document.getElementById("MRP2").textContent = fmrp + jugadMrp - mrp;
+        
   let fdiscount = qty.value * disc;
   document.getElementById("discOnMrp").textContent = Math.round(x - y);
 }
@@ -301,7 +300,7 @@ function getQty(qty, value, mrp, disc) {
 function calculatesum() {
   let totalFp = products.reduce(function (acc, curr) {
     // return acc + curr.Finalprice;
-    return acc + curr.price;
+    return acc + (+curr.price);
   }, 0);
 
   jugadFp = document.getElementById("fp-2").textContent = totalFp;
@@ -309,7 +308,7 @@ function calculatesum() {
 
   let totalMrp = products.reduce(function (acc, curr) {
     // return acc + curr.MRP;
-    return acc + curr.MP;
+    return acc + (+curr.MP);
   }, 0);
 
   jugadMrp = document.getElementById("MRP2").textContent = totalMrp;
