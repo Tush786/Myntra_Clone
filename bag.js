@@ -270,7 +270,7 @@ function displayData() {
 
     qty.addEventListener("change", function () {
       // getQty(qty, ele.Finalprice, ele.MRP, ele.discount);
-      getQty(qty, ele.price, ele.MP, ele.offer);
+      getQty(qty, ele);
     });
   });
 }
@@ -283,25 +283,26 @@ function deleteData(ele, i) {
   //displayData(products);
 }
 
-function getQty(qty, value, mrp, disc) {
-  let fp = qty.value * value;
+function getQty(qty, ele) {
+  let fp = qty.value * ele.price;
   document.getElementById("finalprice").textContent = fp;
-  let y = (document.getElementById("fp-2").textContent = fp + jugadFp - value);
+  let y = (document.getElementById("fp-2").textContent = fp + jugadFp - ele.price);
 
-  let fmrp = qty.value * mrp;
+  let fmrp = qty.value * ele.MP;
   document.getElementById("MRP").textContent = fmrp;
-  let x = (document.getElementById("MRP2").textContent = fmrp + jugadMrp - mrp);
+  let x = (document.getElementById("MRP2").textContent = fmrp + jugadMrp - ele.MP);
    
 
      
-  let fdiscount = qty.value * disc;
+  let fdiscount = qty.value * ele.offer;
   document.getElementById("discOnMrp").textContent = Math.round(x - y);
 }
+
 
 function calculatesum() {
   let totalFp = products.reduce(function (acc, curr) {
     // return acc + curr.Finalprice;
-    return acc + curr.price;
+    return acc + (+curr.price);
   }, 0);
 
   jugadFp = document.getElementById("fp-2").textContent = totalFp;
@@ -309,10 +310,10 @@ function calculatesum() {
 
   let totalMrp = products.reduce(function (acc, curr) {
     // return acc + curr.MRP;
-    return acc + curr.MP;
+    return acc + (+curr.MP);
   }, 0);
 
-  jugadMrp = document.getElementById("MRP2").textContent = totalMrp;
+   jugadMrp = document.getElementById("MRP2").textContent = totalMrp;
   
 
 }
