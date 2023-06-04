@@ -30,7 +30,7 @@ let jugadMrp;
 // let products = JSON.parse(localStorage.getItem("cartGo"))||[]
 let products = JSON.parse(localStorage.getItem("wishlistGo"))||[]
 
-console.log(products);
+ console.log(products);
 
 if (products.length === 0) {
   displayEmpty();
@@ -194,7 +194,7 @@ function displayData() {
     spanb.setAttribute("id", "finalprice");
     // spanb.textContent = ele.Finalprice;
     spanb.textContent = ele.price;
-
+ 
 
     b.append(spanb);
     p.append(b);
