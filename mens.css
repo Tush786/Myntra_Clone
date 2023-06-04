@@ -89,17 +89,6 @@
      border: none;
     
  }
- 
-
-
-
-
-
-
-
- 
-
-
 #c1{
     border:0;
 }
@@ -137,7 +126,7 @@ margin-left: 45px;
 
 #append_data,#a1,#a2,#a3{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     grid-template-rows: auto;
     gap:30px;
     justify-content: center;
@@ -188,12 +177,6 @@ margin-left: 45px;
    padding-left: 7px;
  
 }
-
-
-
-
-
-
 #type1{
    font-size:16px;
    font-family: sans-serif;
@@ -201,9 +184,6 @@ margin-left: 45px;
    padding-right: 3px;
    color: rgb(83, 83, 83);
 }
-
-
-
 #price1,#off1{
     margin-top: 15px;
 }

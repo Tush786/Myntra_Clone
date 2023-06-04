@@ -1,0 +1,176 @@
+body{
+    background-color: rgb(252, 236, 239);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body input{
+    outline: none;
+}
+#navbar{
+    background-color: white;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 80px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu{
+    width: 40%;
+    margin-left: 4%;
+    cursor: pointer;
+}
+#menu a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-weight: 650;
+    font-size: small;
+}
+#img{
+    width: 10%;
+    align-self: center;
+}
+#searchBox{
+    display: flex;
+    margin-left: 8%;
+    width: 30%;
+    background-color: #f5f5f6;
+    height: 50%;
+    align-items: center;
+    border-radius: 3px;
+}
+#searchBox img{
+    width: 4%;
+    margin: 4%;
+}
+#search {
+    width: 100%;
+    border: none;
+    background-color: #f5f5f6;
+}
+#profile{
+    margin-right: 45px;
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+}
+#acc{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-left: 15px;
+}
+a{
+    text-decoration: none;
+}
+#acc img{
+    height: 25px !important;
+    margin-left: 0px;
+}
+#acc p{
+    margin-top: -2px;
+    font-size: small;
+    color: black;
+    font-weight: 600;
+}
+#main{
+    margin-top: 8%;
+    width: 30%;
+    height: 530px;
+    margin-left: 35%;
+    background-color: white;
+}
+#mobileNum{
+    font-size: small;
+    margin-top: -10px;
+}
+#sign{
+    width: 80%;
+    margin-left: 10%;
+}
+#sign > h3{
+    padding-top: 10%;
+}
+#signNumber{
+    display: flex;
+    justify-content: space-between;
+}
+#signNumber img{
+    width: 8%;
+    height: 8%;
+    margin-top: 8%;
+}
+#loginUp{
+    width: 98%;
+    margin-top: 5%;
+}
+#loginUp input{
+    width: 94%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin-bottom: 6%;
+}
+#gender{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+#gender div{
+    display: flex;
+    margin-left: 30px;
+}
+#passBtn{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: -4%;
+    margin-bottom: 8%;
+}
+#passBtn div{
+    background-color: rgb(235, 231, 231);
+    border: none;
+    text-align: center;
+    font-size: 11px;
+    height: 25px;
+    padding-bottom: 10px;
+    width: 90px;
+}
+
+#loginUp h5{
+    margin-top: -4%;
+    color: rgb(165, 157, 157);
+}
+#loginUp h5 span{
+    color: rgb(247, 74, 103);
+}
+#btn{
+    background-color: rgb(247, 74, 103);
+    width: 125%;
+    margin-left: -12.5%;
+    border: none;
+    border-radius: 2px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    color: white;
+    margin-top: 15%;
+    display: block;
+    display: block;
+    cursor: pointer;
+}
+@media only screen and (max-width: 500px) {
+    /* Small Screen  */
+    #main_container{
+        display: none;
+    }
+    #main{
+        margin-left: 0%;
+        margin-top: 0%;
+        width: 100%;
+    }
+}
