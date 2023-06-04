@@ -1,4 +1,4 @@
-var numbers = JSON.parse(localStorage.getItem("number"));
+var numbers = JSON.parse(localStorage.getItem("numbers"));
 var users = JSON.parse(localStorage.getItem("details")) || [];
 var existingUser = users.find(function(user) {
   return user.numbers === numbers;
