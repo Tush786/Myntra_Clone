@@ -25,11 +25,15 @@ body input{
 }
 #menu a{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    color: black;
+    color: rgb(7, 3, 32);
     font-weight: 650;
-    font-size: small;
+    font-size: 12px;
+}
+#menuDetail{
+    display: flex;
+    margin-left: 12%;
+    gap: 35px;
 }
 #img{
     width: 10%;
@@ -37,7 +41,7 @@ body input{
 }
 #searchBox{
     display: flex;
-    margin-left: 8%;
+    margin-left: 9%;
     width: 30%;
     background-color: #f5f5f6;
     height: 50%;
@@ -54,7 +58,7 @@ body input{
     background-color: #f5f5f6;
 }
 #profile{
-    margin-right: 45px;
+    margin-right: 4%;
     display: flex;
     justify-content: space-around;
     height: 40px;
@@ -62,21 +66,30 @@ body input{
 #acc{
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 25px;
     margin-left: 15px;
 }
 a{
     text-decoration: none;
 }
-#acc img{
+#wish{
     height: 25px !important;
-    margin-left: 0px;
+    margin-left: 8px;
 }
-#acc p{
+#bag{
+    height: 20px;
+}
+#p1{
     margin-top: -2px;
     font-size: small;
     color: black;
     font-weight: 600;
+}
+#p2{
+    margin-top: 2px;
+    font-size: small;
+    color: black;
+    font-weight: 600; 
 }
 #main_box{
     margin-top: 8%;
@@ -127,7 +140,6 @@ h5 span{
     color: rgb(248, 63, 94);
 }
 @media only screen and (max-width: 500px) {
-    /* Small Screen  */
     #main_container{
         display: none;
     }
