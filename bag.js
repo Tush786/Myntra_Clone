@@ -97,7 +97,7 @@ function displayData() {
 
 
 
-    let size = document.createElement("select");
+    let size = document.createElement("select")
     size.setAttribute("class", "Size");
     let size1 = document.createElement("option");
     size1.value = "1";
