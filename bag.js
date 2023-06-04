@@ -305,8 +305,7 @@ function calculatesum() {
   }, 0);
 
   jugadFp = document.getElementById("fp-2").textContent = totalFp;
-  var FP=document.getElementById("Final_Pri");
-  FP.textContent= totalFp;
+
 
   let totalMrp = products.reduce(function (acc, curr) {
     // return acc + curr.MRP;
@@ -314,6 +313,5 @@ function calculatesum() {
   }, 0);
 
   jugadMrp = document.getElementById("MRP2").textContent = totalMrp;
-  var TP=document.getElementById("TP");
-    TP.textContent=totalMrp;
+  
   }
