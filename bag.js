@@ -312,6 +312,4 @@ function calculatesum() {
   }, 0);
 
   jugadMrp = document.getElementById("MRP2").textContent = totalMrp;
-  
-
-}
+  }
