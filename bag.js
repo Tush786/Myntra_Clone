@@ -1,31 +1,36 @@
 let jugadFp;
 let jugadMrp;
 
-let products = [
-  {
-    name: "FUBAR",
-    type: "Tartan Checked Spread Collar Cotton Casual Shirt",
-    seller: "sold by:Vision star",
-    size: "M",
-    MRP: 1499,
-    discount: 75,
-    Finalprice: 374,
-    image:
-      "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/22913888/2023/4/27/e27bafeb-eca1-4d3a-b41f-44301e1891a91682565216782FUBARMenMulticolouredSlimFitTartanChecksOpaqueCheckedCasualS1.jpg",
-  }
-  ,
-  // {
-  //   name: "FUBAR",
-  //   type: "Tartan Checked Spread Collar Cotton Casual Shirt",
-  //   seller: "sold by:Vision star",
-  //   size: "M",
-  //   MRP: 1499,
-  //   discount: 75,
-  //   Finalprice: 374,
-  //   image:
-  //     "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/22913888/2023/4/27/e27bafeb-eca1-4d3a-b41f-44301e1891a91682565216782FUBARMenMulticolouredSlimFitTartanChecksOpaqueCheckedCasualS1.jpg",
-  // }
-];
+// let products = [
+//   {
+//     name: "FUBAR",
+//     type: "Tartan Checked Spread Collar Cotton Casual Shirt",
+//     seller: "sold by:Vision star",
+//     size: "M",
+//     MRP: 1499,
+//     discount: 75,
+//     Finalprice: 374,
+//     image:
+//       "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/22913888/2023/4/27/e27bafeb-eca1-4d3a-b41f-44301e1891a91682565216782FUBARMenMulticolouredSlimFitTartanChecksOpaqueCheckedCasualS1.jpg",
+//   }
+//   ,
+//   {
+//     name: "FUBAR",
+//     type: "Tartan Checked Spread Collar Cotton Casual Shirt",
+//     seller: "sold by:Vision star",
+//     size: "M",
+//     MRP: 1499,
+//     discount: 75,
+//     Finalprice: 374,
+//     image:
+//       "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/22913888/2023/4/27/e27bafeb-eca1-4d3a-b41f-44301e1891a91682565216782FUBARMenMulticolouredSlimFitTartanChecksOpaqueCheckedCasualS1.jpg",
+//   }
+// ];
+
+// let products = JSON.parse(localStorage.getItem("cartGo"))||[]
+let products = JSON.parse(localStorage.getItem("wishlistGo"))||[]
+
+console.log(products);
 
 if (products.length === 0) {
   displayEmpty();
@@ -69,7 +74,10 @@ function displayData() {
     let name = document.createElement("h4");
     name.style.marginTop = "12px";
     name.setAttribute("id", "name");
-    name.textContent = ele.name;
+    console.log(name);
+    // name.textContent = ele.name;
+    name.textContent = ele.brand;
+    
 
     let type = document.createElement("p");
     type.setAttribute("id", "type");
@@ -78,7 +86,9 @@ function displayData() {
 
     let seller = document.createElement("span");
     seller.setAttribute("class", "seller");
-    seller.textContent = ele.seller;
+    // seller.textContent = ele.seller;
+    seller.textContent = "sold by:Vision star";
+
 
     let div3 = document.createElement("div");
     div3.style.display = "flex";
@@ -110,8 +120,6 @@ function displayData() {
     size5.text = "Size: XXL";
    
     size.append(size1,size2,size3,size4,size5);
-
-
 
 
     let qty = document.createElement("select");
@@ -184,7 +192,9 @@ function displayData() {
 
     let spanb = document.createElement("span");
     spanb.setAttribute("id", "finalprice");
-    spanb.textContent = ele.Finalprice;
+    // spanb.textContent = ele.Finalprice;
+    spanb.textContent = ele.price;
+
 
     b.append(spanb);
     p.append(b);
@@ -195,7 +205,9 @@ function displayData() {
 
     let spanOfs = document.createElement("span");
     spanOfs.setAttribute("id", "MRP");
-    spanOfs.textContent = ele.MRP;
+    // spanOfs.textContent = ele.MRP;
+    spanOfs.textContent = ele.MP;
+
 
     s.append(spanOfs);
     p.append(s);
@@ -205,7 +217,10 @@ function displayData() {
 
     let spanOfp2 = document.createElement("span");
     spanOfp2.setAttribute("id", "discount");
-    spanOfp2.textContent = ele.discount + "% OFF";
+    // spanOfp2.textContent = ele.discount + "% OFF";
+    spanOfp2.textContent = ele.offer + "% OFF";
+
+
     p2.append(spanOfp2);
 
     let div5 = document.createElement("div");
@@ -237,21 +252,31 @@ function displayData() {
     body.append(div1);
 
     let MRP2 = document.getElementById("MRP2");
-    MRP2.textContent = ele.MRP;
+    // MRP2.textContent = ele.MRP;
+    MRP2.textContent = ele.MP;
+
 
     let discOnMrp = document.getElementById("discOnMrp");
-    discOnMrp.textContent = Math.round((ele.MRP / 100) * ele.discount);
+    // discOnMrp.textContent = Math.round((ele.MRP / 100) * ele.discount);
+    discOnMrp.textContent = Math.round((ele.MP / 100) * ele.offer);
+
 
     let finalP = document.getElementById("fp-2");
-    finalP.textContent = ele.Finalprice;
+    // finalP.textContent = ele.Finalprice;
+    finalP.textContent = ele.price;
+
 
     document.getElementById("items").textContent = products.length;
 
     qty.addEventListener("change", function () {
-      getQty(qty, ele.Finalprice, ele.MRP, ele.discount);
+      // getQty(qty, ele.Finalprice, ele.MRP, ele.discount);
+      getQty(qty, ele.price, ele.MP, ele.offer);
     });
   });
 }
+
+
+
 
 function deleteData(ele, i) {
   products.splice(i, 1);
@@ -266,21 +291,28 @@ function getQty(qty, value, mrp, disc) {
   let fmrp = qty.value * mrp;
   document.getElementById("MRP").textContent = fmrp;
   let x = (document.getElementById("MRP2").textContent = fmrp + jugadMrp - mrp);
+   
 
+     
   let fdiscount = qty.value * disc;
   document.getElementById("discOnMrp").textContent = Math.round(x - y);
 }
 
 function calculatesum() {
   let totalFp = products.reduce(function (acc, curr) {
-    return acc + curr.Finalprice;
+    // return acc + curr.Finalprice;
+    return acc + curr.price;
   }, 0);
 
   jugadFp = document.getElementById("fp-2").textContent = totalFp;
+  
 
   let totalMrp = products.reduce(function (acc, curr) {
-    return acc + curr.MRP;
+    // return acc + curr.MRP;
+    return acc + curr.MP;
   }, 0);
 
   jugadMrp = document.getElementById("MRP2").textContent = totalMrp;
+  
+
 }
