@@ -283,18 +283,18 @@ function deleteData(ele, i) {
   //displayData(products);
 }
 
-function getQty(qty, ele) {
-  let fp = qty.value * ele.price;
+function getQty(qty, value, mrp, disc) {
+  let fp = qty.value * +value;
   document.getElementById("finalprice").textContent = fp;
-  let y = (document.getElementById("fp-2").textContent = fp + jugadFp - ele.price);
+  let y = (document.getElementById("fp-2").textContent = fp + jugadFp - value);
 
   let fmrp = qty.value * ele.MP;
   document.getElementById("MRP").textContent = fmrp;
-  let x = (document.getElementById("MRP2").textContent = fmrp + jugadMrp - ele.MP);
+  let x = (document.getElementById("MRP2").textContent = fmrp + jugadMrp - mrp);
    
 
      
-  let fdiscount = qty.value * ele.offer;
+  let fdiscount = qty.value * disc;
   document.getElementById("discOnMrp").textContent = Math.round(x - y);
 }
 
