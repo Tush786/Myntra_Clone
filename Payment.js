@@ -338,3 +338,45 @@ function ReOTP() {
   var Hide = document.getElementById("PUP2");
   Hide.style.visibility = "hidden";
 }
+
+
+
+
+function Show_Gift(){
+  event.preventDefault()
+  var DIV=document.createElement("div")
+  DIV.setAttribute("id","Show_gift");
+  DIV.style.visibility="visible"
+
+  var DIV1=document.createElement("div")
+  var H=document.createElement("h3");
+  H.textContent="Apply Gift Card";
+
+  var H2=document.createElement("h5");
+  H2.textContent="Gift card value will be added to your Myntra Credit";
+
+  var INP1=document.createElement("input");
+  INP1.setAttribute("type","text")
+  INP1.setAttribute("placeholder","16 Digit Gift Card Number");
+
+
+  var INP2=document.createElement("input");
+  INP2.setAttribute("type","text")
+  INP2.setAttribute("placeholder","6 Digit Gift Card Pin");
+
+  var BTN=document.createElement("button");
+  BTN.textContent="ADD TO MYNTRA CREDIT"
+  // BTN.addEventListener("click",Hide_Gift);
+
+  DIV.append(H,H2,INP1,INP2,BTN)
+
+  document.getElementById("Gift").append(DIV);
+
+}
+
+
+// function Hide_Gift{
+//   event.preventDefault();
+//   var Hide=document.getElementById("Show_gift");
+//   Hide.style.visibility="Hidden"
+// }

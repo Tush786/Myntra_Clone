@@ -103,3 +103,10 @@ function Del(elm, i) {
   var ADD = document.getElementById("Add");
   ADD.style.display = "visible";
 }
+
+
+
+function Change_Col(){
+ var ADD= document.getElementById("add");
+ ADD.style.color="white"
+}

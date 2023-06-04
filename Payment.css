@@ -22,9 +22,10 @@
 }
 
 .Text i{
-  font-size: 10px;
+  font-size: 6px;
   align-items: center;
   justify-content: center;
+  color: #dddee0;
 }
 
 .more_text{
@@ -85,6 +86,11 @@ margin-left: -55px;
   width: auto;
   color: #424553;
   border: 1px solid rgb(230, 227, 227);
+}
+
+#Pay_opt p{
+  font-size: 16px;
+  font-weight: 600;
 }
 
 #Pay_opt > div {
@@ -357,3 +363,59 @@ input {
   border: none;
   background-color: #f6f5f5;
 }
+
+/* <------------- Gift Card POP_UP------------> */
+#Gift{
+  width: 25%;
+  border-radius: 5px;
+  border: 1px solid rgb(9, 5, 5);
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%,-50%) scale((0.1));
+  text-align: center;
+
+  visibility: visible;
+  transition: transform 0.4s,top 0.4s;
+  border: none;
+}
+
+#Show_gift{
+  background: #e6e0e0;
+  padding: 10px 10px;
+}
+
+#Show_gift input{
+  display: block;
+  width: 90%;
+  margin-top: auto;
+  padding: 10px 5px 10px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #424553;
+}
+
+#Show_gift button{
+   width: 95%;
+   padding: 10px 30px;
+   margin: 10px 0px 10px;
+   border-radius: 5px;
+   border: none;
+   background-color:  #bfc0c6;
+   color: white;
+   font-weight: 800;
+   letter-spacing: 1px;
+}
+
+ #Show_gift h3{
+  text-align: left;
+  margin: 10px 10px;
+  color: #424553;
+}
+
+#Show_gift h5{
+  text-align: left;
+  margin: 10px 10px;
+  color: #424553;
+}
+

@@ -38,11 +38,18 @@
 #mid h4 {
   padding: 0px 2px;
   text-align: center;
-  color: #79747c;
-  font-size: 16px;
+  color: #696b79;
+  font-size: 12px;
   line-height: 20px;
-  font-weight: 800;
+  font-weight: 1600;
+  letter-spacing: 2px;
 }
+
+#mid h5{
+  letter-spacing: 2px;
+  padding: 0px 5px;
+}
+
 
 #end img {
   width: 30px;
