@@ -51,7 +51,7 @@ document.querySelector("form").addEventListener("submit", myProfile)
 
                 localStorage.setItem("details", JSON.stringify(detailArr))
 
-                window.location.href = "home.html";
+                window.location.href = "homepage.html";
             }
         }
         
