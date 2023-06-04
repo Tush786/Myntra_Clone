@@ -5,7 +5,7 @@ document.querySelector("form").addEventListener("submit", myProfile)
     function myProfile(){
         event.preventDefault()
 
-        var numbers = JSON.parse(localStorage.getItem("number")) 
+        var numbers = JSON.parse(localStorage.getItem("numbers")) 
 
         var detailObj = {
             numbers: numbers,
@@ -61,9 +61,7 @@ document.querySelector("form").addEventListener("submit", myProfile)
         document.querySelector("#mobile").value = ""
     }
 
-    var mobile = JSON.parse(localStorage.getItem("number"))||[]
-
-    // document.querySelector("#mobileNum").textContent = mobile
+    var mobile = JSON.parse(localStorage.getItem("numbers"))||[]
 
     displayNumber()
 
