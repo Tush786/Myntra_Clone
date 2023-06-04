@@ -4,63 +4,475 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
+    <script src="https://kit.fontawesome.com/32979f5c51.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <title>
       Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra
-    </title>
+  </title>
+  <link rel = "icon"href="https://i.pinimg.com/originals/75/68/05/75680550fdc2305216ad9014d2b8b8f2.png" 
+  type = "image/x-icon">
    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="homepage.css">
-    <!-- <link rel="stylesheet" type="text/css" href="navbar.css">
-    <link rel="stylesheet" type="text/css" href="footer.css"> -->
 
   </head>
   <body>
 
     <!-- Navbar starts -->
-
-    <div id="main_container">
+    <div class="nav_up">
       <div id="navbar">
-          <div id="menu">
-              <img src="data:image/png;base64,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" 
-              alt="Myntra Logo">
-              <p>MEN</p>
-              <p>WOMEN</p>
-              <p>KIDS</p>
-              <p>HOME LIVING</p>
-              <p>STUDIO</p>
+        <div class="parent-box-1">
+          <div class="logo_div">
+            <a href=""> <img id="logo" src="https://i.pinimg.com/originals/75/68/05/75680550fdc2305216ad9014d2b8b8f2.png" alt="Myntra Logo"></a>
           </div>
+          <div class="menu_div">
+            
+            <div id="main_div">
+              <a id="button1" href="#">MENS</a>
+              <div id="shubhi1">
+                <div id="b">
+                  <div class="div" id="d1">
+                    <h5 class="h5"><a href="">Topwear</a></h5>
+                    <ul>
+                      <li><a href="">T-shirts</a></li>
+                      <li><a href="#">Casual Shirts</a></li>
+                      <li><a href="#">Formal Shirts</a></li>
+                      <li><a href="#">Sweatshirts</a></li>
+                      <li><a href="#">Sweaters</a></li>
+                      <li><a href="#">Jackets</a></li>
+                      <li><a href="#">Blazers &amp; Coats</a></li>
+                      <li><a href="#">Suits</a></li>
+                      <li><a href="#">Rain Jackets</a></li>
+                    </ul>
+                  </div>
+                  <div id="d2"> 
+                    <h5 class="h5"><a href="/">Indian &amp; Festive Wear</a></h5>
+                    <ul>
+                      <li><a href="#">Kurtas &amp; Kurta Sets</a></li>
+                      <li><a href="#">Sherwanis</a></li>
+                      <li><a href="#">Nehru Jackets</a></li>
+                      <li><a href="#">Dhotis</a></li>
+                    </ul>
+                  </div>
+                  <div id="d3">
+                    <h5 class="h5"><a href="/">Bottom Wear</a></h5>
+                    <ul>
+                      <li><a href="#">Jeans</a></li>
+                      <li><a href="#">Causal Trousers</a></li>
+                      <li><a href="#">Formal Trousers</a></li>
+                      <li><a href="#">Sports</a></li>
+                      <li><a href="#">Track Pants &amp; joggers</a></li>
+                    </ul>
+                  </div> 
+                  <div id="d4">
+                    <h5 class="h5"><a href="/">Innerwear &amp; Joggers</a></h5>
+                    <ul>
+                      <li><a href="#">Briefs &amp; Trunks</a></li>
+                      <li><a href="#">Boxers</a></li>
+                      <li><a href="#">Vests</a></li>
+                      <li><a href="#">Sleepwear &amp; Loungewear</a></li>
+                      <li><a href="#">Thermals</a></li>
+                    </ul>
+                    <h5 class="h5"><a href="/">Plus Size</a></h5>
+                  </div>
+                  <div id="d5">
+                    <h5 class="h5"><a href="/">Footwear</a></h5>
+                    <ul>
+                      <li><a href="#">Casual Shoes</a></li>
+                      <li><a href="#">Sports Shoes</a></li>
+                      <li><a href="#">Formal Shoes</a></li>
+                      <li><a href="#">Sneakers</a></li>
+                      <li><a href="#">Sandals &amp; Floaters</a></li>
+                      <li><a href="#">Flip Flops</a></li>
+                      <li><a href="#">Socks</a></li>
+                    </ul>
+                  </div>
+                  <div id="d6">
+                    <h5 class="h5"><a href="#">Personal care &amp; Grooming</a></h5>
+                    <h5 class="h5"><a href="#">Sunglass &amp; Frames</a></h5>
+                    <h5 class="h5"><a href="#">Watches</a></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div id="main_div">
+              <a id="button2" href="#">WOMENS</a>
+              <div id="shubhi2">
+                <div id="b">
+                  <div class="div" id="d1">
+                    <h5 class="h5"><a href="#">Indian &amp; Fusion wear</a></h5>
+                    <ul>
+                      <li><a href="">Kurtas &amp; Suits</a></li>
+                      <li><a href="">Kurtis,Tunics &amp; Tops</a></li>
+                      <li><a href="#">Ethnic Wear</a></li>
+                      <li><a href="#">Leggings, Salwars &amp; Churidars</a></li>
+                      <li><a href="#">Skirts &amp; Palazzos</a></li>
+                      <li><a href="#">Sarees</a></li>
+                      <li><a href="#">Dress Materials</a></li>
+                      <li><a href="#">Lehenga Cholis</a></li>
+                      <li><a href="#">Dupattas &amp; Shawls</a></li>
+                    </ul>
+                  </div>
+                  <div id="d2">
+                    <h5 class="h5"><a href="#">Western wear</a></h5>
+                    <ul>
+                      <li><a href="#">Dresses</a></li>
+                      <li><a href="#">Tops</a></li>
+                      <li><a href="#">Tshirts</a></li>
+                      <li><a href="#">Jeans</a></li>
+                      <li><a href="#">Trousers &amp; Capris</a></li>
+                      <li><a href="#">Shorts &amp; Skirts</a></li>
+                      <li><a href="#">Co-ords</a></li>
+                      <li><a href="#">Playsuits</a></li>
+                    </ul>
+                  </div>
+                  <div id="d3">
+                    <h5 class="h5"><a href="#">Sport &amp; Active wear</a></h5>
+                    <ul>
+                      <li><a href="#">Clothing</a></li>
+                      <li><a href="#">Footwear</a></li>
+                      <li><a href="#">Sports Accessories</a></li>
+                      <li><a href="#">Sports Equipment</a></li>
+                    </ul>
+                  </div>
+                  <div id="d4">
+                    <h5 class="h5"><a href="#">Beauty &amp; Personal care</a></h5>
+                    <ul>
+                      <li><a href="#&quot;">Makeup</a></li>
+                      <li><a href="#">Skincare</a></li>
+                      <li><a href="#">Premium Beauty</a></li>
+                      <li><a href="#">Lipsticks</a></li>
+                      <li><a href="#">Fragrances</a></li>
+                    </ul>
+                    <h5 class="h5"><a href="#">Plus Size</a></h5>
+                  </div>
+                  <div id="d5">
+                    <h5 class="h5"><a href="#">Lingerie &amp; Sleepwear</a></h5>
+                    <ul>
+                      <li><a href="#">Bra</a></li>
+                      <li><a href="#">Briefs</a></li>
+                      <li><a href="#">Shapewear</a></li>
+                      <li><a href="#">Sleepwear &amp; Loungewear</a></li>
+                      <li><a href="#">Swimwear</a></li>
+                      <li><a href="#">Camisoles &amp; Thermals</a></li>
+                      <li><a href="#">Socks</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="main_div">
+              <a id="button3" href="#">KIDS</a>
+              <div id="shubhi3">
+                <div id="b">
+                  <div class="div" id="d1">
+                    <h5 class="h5"><a href="#">Boys Clothing</a></h5>
+                    <ul>
+                      <li><a href="#">T-Shirts</a></li>
+                      <li><a href="#">Shirts</a></li>
+                      <li><a href="#">Shorts</a></li>
+                      <li><a href="#">Jeans</a></li>
+                      <li><a href="#">Trousers</a></li>
+                      <li><a href="#">Clothing Sets</a></li>
+                      <li><a href="#">Ethnic Wear</a></li>
+                      <li><a href="#">Track Pants &amp; Pyjamas</a></li>
+                      <li><a href="#">Jacket, Sweater &amp; Sweatshirts</a></li>
+                      <li><a href="#">Party Wear</a></li>
+                      <li><a href="#">Innerwear &amp; Thermals</a></li>
+                    </ul>
+                  </div>
+                  <div id="d2">
+                    <h5 class="h5"><a href="#">Girls Clothing</a></h5>
+                    <ul>
+                      <li><a href="#">Dresses</a></li>
+                      <li><a href="#">Tops</a></li>
+                      <li><a href="#">Tshirts</a></li>
+                      <li><a href="#">Clothing Sets</a></li>
+                      <li><a href="#">Lehenga choli</a></li>
+                      <li><a href="#">Kurta Sets</a></li>
+                      <li><a href="#">Party wear</a></li>
+                      <li><a href="#">Dungarees &amp; Jumpsuits</a></li>
+                      <li><a href="#">Skirts &amp; shorts</a></li>
+                      <li><a href="#">Tights &amp; Leggings</a></li>
+                    </ul>
+                  </div>
+                  <div id="d3">
+                    <h5 class="h5"><a href="/">Footwear</a></h5>
+                    <ul>
+                      <li><a href="#">Casual Shoes</a></li>
+                      <li><a href="#">Flipflops</a></li>
+                      <li><a href="/">Sports Shoes</a></li>
+                      <li><a href="/">Flats</a></li>
+                      <li><a href="/">Sandals</a></li>
+                      <li><a href="/">Heels</a></li>
+                      <li><a href="/">School Shoes</a></li>
+                      <li><a href="/">Socks</a></li>
+                    </ul>
+                  </div>
+                  <div id="d4">
+                    <h5 class="h5"><a href="#">Infants</a></h5>
+                    <ul>
+                      <li><a href="#">Bodysuits</a></li>
+                      <li><a href="#">Rompers &amp; Sleepsuits</a></li>
+                      <li><a href="#">Clothing Sets</a></li>
+                      <li><a href="#">Tshirts &amp; Tops</a></li>
+                      <li><a href="#">Dresses</a></li>
+                      <li><a href="#">Bottom wear</a></li>
+                      <li><a href="#">Winter Wear</a></li>
+                      <li><a href="#">Innerwear &amp; Sleepwear</a></li>
+                      <li><a href="#">Infant Care</a></li>
+                    </ul>
+                    <h5 class="h5"><a href="#">Plus Size</a></h5>
+                  </div>
+                  <div id="d5">
+                    <h5 class="h5"><a href="#">Kids Accessories</a></h5>
+                    <ul>
+                      <li><a href="#">Bags &amp; Backpacks</a></li>
+                      <li><a href="#">Watches</a></li>
+                      <li><a href="#">Jewellery &amp; Hair accessory</a></li>
+                      <li><a href="#">Sunglasses</a></li>
+                      <li><a href="#">Masks &amp; Protective Gears</a></li>
+                      <li><a href="#">Caps &amp; Hats</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="main_div">
+              <a id="button4" href="#">HOME &amp; LIVING</a>
+              <div id="shubhi4">
+                <div id="b">
+                  <div class="div" id="d1">
+                    <h5 class="h5"><a href="#">Bed Linen &amp; Furnishing</a></h5>
+                    <ul>
+                      <li><a href="#">Bed Runners</a></li>
+                      <li><a href="#">Mattress Protectors</a></li>
+                      <li><a href="#">Bedsheets</a></li>
+                      <li><a href="#">Bedding Sets</a></li>
+                      <li><a href="#">Blankets, Quilts &amp; Dohars</a></li>
+                      <li><a href="#">Pillows &amp; Pillow Covers</a></li>
+                      <li><a href="#">Bed Covers</a></li>
+                      <li><a href="#">Diwan Sets</a></li>
+                      <li><a href="#">Chair Pads &amp; Covers</a></li>
+                      <li><a href="#">Sofa Covers</a></li>
+                    </ul>
+                  </div>
+                  <div id="d2">
+                    <h5 class="h5"><a href="#">Bath</a></h5>
+                    <ul>
+                      <li><a href="#">Bath Towels</a></li>
+                      <li><a href="#">Hand &amp; Face Towels</a></li>
+                      <li><a href="#">Beach Towels</a></li>
+                      <li><a href="#">Towels Set</a></li>
+                      <li><a href="#">Bath Rugs</a></li>
+                      <li><a href="#">Bath Robes</a></li>
+                      <li><a href="#">Bathroom Accessories</a></li>
+                      <li><a href="#">Shower Curtains</a></li>
+                    </ul>
+                  </div>
+                  <div id="d3">
+                    <h5 class="h5"><a href="#">Home Décor</a></h5>
+                    <ul>
+                      <li><a href="#">Plants &amp; Planters</a></li>
+                      <li><a href="#">Aromas &amp; Candles</a></li>
+                      <li><a href="#">Clocks</a></li>
+                      <li><a href="#">Mirrors</a></li>
+                      <li><a href="#">Wall Décor</a></li>
+                      <li><a href="#">Festive Decor</a></li>
+                      <li><a href="#">Pooja Essentials</a></li>
+                      <li><a href="#">Wall Shelves</a></li>
+                      <li><a href="#">Fountains</a></li>
+                      <li><a href="#">Showpieces &amp; Vases</a></li>
+                    </ul>
+                  </div>
+                  <div id="d4">
+                    <h5 class="h5"><a href="#">Kitchen &amp; Table</a></h5>
+                    <ul>
+                      <li><a href="#">Table Runners</a></li>
+                      <li><a href="#">Dinnerware &amp; Serveware</a></li>
+                      <li><a href="#">Cups and Mugs</a></li>
+                      <li><a href="#">Bakeware &amp; Cookware</a></li>
+                      <li><a href="#">Kitchen Storage &amp; Tools</a></li>
+                      <li><a href="#">Bar &amp; Drinkware</a></li>
+                    </ul>
+                    <h5 class="h5"><a href="#">Curtains</a></h5>
+                  </div>
+                  <div id="d5">
+                    <h5 class="h5"><a href="#">Lamps &amp; Lighting</a></h5>
+                    <ul>
+                      <li><a href="#">Floor Lamps</a></li>
+                      <li><a href="#">Ceiling Lamps</a></li>
+                      <li><a href="#">Table Lamps</a></li>
+                      <li><a href="#">Wall Lamps</a></li>
+                      <li><a href="#">Outdoor Lamps</a></li>
+                      <li><a href="#">String Lights</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="main_div">
+              <a id="button5" href="#">BEAUTY</a>
+              <div id="shubhi5">
+                <div id="b">
+                  <div class="div" id="d1">
+                    <h5 class="h5"><a href="#">Makeup</a></h5>
+                    <ul>
+                      <li><a href="#">Lipstick</a></li>
+                      <li><a href="#&quot;">Lip Gloss</a></li>
+                      <li><a href="#">Lip Liner</a></li>
+                      <li><a href="#">Mascara</a></li>
+                      <li><a href="#">Eyeliner</a></li>
+                      <li><a href="#">Kajal</a></li>
+                      <li><a href="#">Eyeshadow</a></li>
+                      <li><a href="#">Foundation</a></li>
+                      <li><a href="#">Primer</a></li>
+                      <li><a href="#">Concealer</a></li>
+                      <li><a href="#">Compact</a></li>
+                      <li><a href="#">Nail Polish</a></li>
+                    </ul>
+                  </div>
+                  <div id="d2">
+                    <h5 class="h5"><a href="#">Skincare, Bath &amp; Body</a></h5>
+                    <ul>
+                      <li><a href="#">Face Moisturiser</a></li>
+                      <li><a href="#">Cleanser</a></li>
+                      <li><a href="#">Masks &amp; Peel</a></li>
+                      <li><a href="#">Sunscreen</a></li>
+                      <li><a href="#">Serum</a></li>
+                      <li><a href="#">Face Wash</a></li>
+                      <li><a href="#">Eye Cream</a></li>
+                      <li><a href="#">Lip Balm</a></li>
+                      <li><a href="#">Body Lotion</a></li>
+                      <li><a href="#">Body Wash</a></li>
+                      <li><a href="#">Body Scrub</a></li>
+                      <li><a href="#">Hand Cream</a></li>
+                    </ul>
+                  </div>
+                  <div id="d3">
+                    <h5 class="h5"><a href="#">Haircare</a></h5>
+                    <ul>
+                      <li><a href="#">Shampoo</a></li>
+                      <li><a href="#">Conditioner</a></li>
+                      <li><a href="#">Hair Cream</a></li>
+                      <li><a href="#">Hair Oil</a></li>
+                      <li><a href="#">Hair Gel</a></li>
+                      <li><a href="#">Hair Color</a></li>
+                      <li><a href="#">Hair Serum</a></li>
+                      <li><a href="#">Hair Accessory</a></li>
+                    </ul>
+                  </div>
+                  <div id="d4">
+                    <h5 class="h5"><a href="#">Beauty Gift &amp; Makeup Set</a></h5>
+                    <ul>
+                      <li><a href="#">Beauty Gift</a></li>
+                      <li><a href="#">Makeup Kit</a></li>
+                      <li><a href="#">Trimmers</a></li>
+                      <li><a href="#">Beard Oil</a></li>
+                      <li><a href="#">Hair Wax</a></li>
+                    </ul>
+                  </div>
+                  <div id="d5">
+                    <h5 class="h5"><a href="#">Top Brands</a></h5>
+                    <ul>
+                      <li><a href="#">Lakme</a></li>
+                      <li><a href="#">Maybelline</a></li>
+                      <li><a href="#">LOreal</a></li>
+                      <li><a href="#">Philips</a></li>
+                      <li><a href="#">Bath &amp; Body Works</a></li>
+                      <li><a href="#">THE BODY SHOP</a></li>
+                      <li><a href="#">Biotique</a></li>
+                      <li><a href="#">Mamaearth</a></li>
+                      <li><a href="#">MCaffeine</a></li>
+                      <li><a href="#">Nivea</a></li> 
+                    </ul>
+                    <h5 class="h5"><a href="/">Home &amp; Bath</a></h5>
+                  </div>
+                </div>
+               </div>
+            </div>
+            
+            <div id="main_div">
+              <a id="button6" href="#">STUDIO<sup>NEW</sup></a>
+            </div>
+          </div>
+        </div>
+        <!-- parent-box-1 end -->
+  
+  
+        <div class="parent-box-2">
           <div id="searchBox">
-              <img src="data:image/png;base64,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" 
-              alt="Seach Bar">
-              <input type="text" id="search" placeholder="Search for products, brand and more">
+            <img src="data:image/png;base64,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" 
+            alt="Seach Bar">
+            <input type="text" id="search" placeholder="Search for products, brand and more">
           </div>
-          <div id="profile">
-              <div id="acc">
-                  <a href="">
-                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAB8CAMAAACcwCSMAAAAaVBMVEX///8AAAD39/f8/PzR0dHo6Ojz8/OZmZkaGhoqKipPT09YWFhDQ0Opqamvr6/Ozs7g4OBiYmJdXV0VFRU7OzvY2NhJSUk1NTWioqJqamrBwcG4uLh3d3eMjIzIyMgwMDAiIiKEhIQNDQ3GDFjlAAAD8klEQVRoge2a65aiMAyAuSMwKiAqCIry/g+5NGEUmEJTKLPn7Pb7p2Ya2tzLGIZGo9FoNBqNRvOvYdvbyM7j3vx0ZwK71L+5qmTFWE5SmwOC9GhNyD7SYChbJ86ELIUyNDmED57sjS9bLlR9vHwvccrCKAqz0/fn4seBusmUbOgsUG3n3V9nvhO7nmV5buz4X92BnofCTmecr7wnm3UL7KV1ewX+pT9SE/v4/eA4y042HsqeO9lC0vIePHbz4jisW8GKh883B/ii4sm+8EA8Kd3gPbsJc+1hxfePx7nDPYLxQ4m922DaajJXHFkwnzqDOE374TnpVjYc1IWed+7zuluFnwXxQWdcGrXfqbpvoHtWpHwvCFa9zQpXYpE37rWVTQVWAkc+GsYD3Hxe1opamSst2cKhi0TtCPzIYokoFRnUJTwh4o0CaW7BPKc8aBeMFI9nBxoRBJnc7kTbEhw8QQ7SC8U7rC7VXig7utFSDfOgmrBc52uzUdYjIElWVN8wDHaWZkqTZUZ6CaVqDCEKR/rGQfYqEopbF7pSc2Fb+QqiqN0mj50oLJhnRMQFDe9wINcrVqq4LVCPA8k2C6gI2YOVy3wL5T6hp8lJ6W0Be6Jy+aZLkfK/eux7mcIvw51gz1LYRyykGLe8HFjCDrdQHhIyp1SGk8CiZDhWfk5LJhwBrMcVF8tkm0BnmVNcB5i7J+qVR6Q9xdR2SwpoDGOhmJ3Quwk6LMoLgh/vpSc7Md4X1ZNmxr6lQIdNkmRH1Ci1ukceGgw3UJ3f2XZq4t0UHJKo5ZHgQZuBEBjAspW3aB/cjDgDIWeJhlxMylY7i+W+8aXm+Xlg6JXpTyDTqIk3cKBEqk6yHl9c/AnAcJxJ1uhzoEQ7XJ/U4qQ+AmfQldrxho44+vXB67VVpX10YScDXmquKHAQMw3xGmoM7n1xL1st3zdoB68rFtVXvDmuV7SD6POXBZnWhRub8dW4HJDmF9gNLjHNcGUPjqfXSCY7dPNqfVMAudl8SWzCeq2Nkw/lSc7waO6dgtzMgAprBkTHdfAF1ypX6+Ml9HPE9yrLwpOP1RleuKSH5r6rnTrQf0WGdy/rCwKPGF+TzfaVWAkz6QoqxotEhkdzp4qnncHiU6nDwteAm9wmMconJE2u4V14FfdUFN08sNDwygX+EiiLbh5Wwndn7JdkX5pKa8eIHxUaDMT7BhdJI/IfhcZ+betqfR7wbxHJ+4gtmIeeCifLOeKmH88Y/80GmYUP6ntCyLm7DTMLF3R6NonE9dAGvwH6WBDHT9k2RwmQa58nZf2SHBjw5kbX8yIwq23zRkbMnpPrflX7X9q3RqPRaDQajUbzX/EHnCwlW9FhIx4AAAAASUVORK5CYII=" 
-                      alt="wishlist">
-                      <h5>Wishlist</h5>
-                  </a>
+          <!-- <div id="two"></div> -->
+        </div>
+        <div class="parent-box-3">
+          <div id="other_div">
+            <div>
+              <div id="main_div">
+                <a href=""><i class=" fa fa-thin fa-user" id="i2" ></i></a>
+                <h5 id="profile_tag"><a href="#">Profile</a></h5>
+                <div id="shubhi7">
+                  <div id="b">
+                    <div class="div" id="d1">
+                      <h5 id="lh5">Welcome</h5>
+                      <p id="lp">To access account and manage order</p>
+                      <button id="ls"><a id="logincss" href="#">LOGIN / SIGNUP</a></button>
+                      <br>
+                      <hr>
+                      <ul>
+                        <li><a href="#">Order</a></li>
+                        <li><a href="">Wishlist</a></li>
+                        <li><a href="#">Gift card</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Myntra Insider <button id="insider_span">New</button></a></li>
+                      </ul>
+                      <hr>
+                      <ul>
+                        <li><a href="#">Myntra credit</a></li>
+                        <li><a href="#">Coupons</a></li>
+                        <li><a href="#">Saved cards</a></li>
+                        <li><a href="#">Saved Address</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div id="acc">
-                  <a href="">
-                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAh1BMVEX///8AAAD19fXf39/j4+Pc3NyHh4fm5ub8/Pzu7u4JCQkbGxsnJyf09PTq6ur6+vrExMSKioohISGQkJCnp6eCgoIsLCysrKwxMTHAwMB5eXmysrJhYWFra2tBQUE3NzcVFRXMzMycnJxXV1d0dHQXFxdPT09DQ0OVlZVbW1tkZGRJSUnU1NT68IWdAAAIBUlEQVR4nO2da3uqOhCFi6K2gJdiq9VeNtraq///9x2ZaC+QYIRZEzxP3v1pVyUTSCYrk0m4uPB4PB6Px+PxeDwej8fj8Xg8Ho8ol+Fi3b99Wfan896Va2P46dw/xMEvnt57rk1iZfUYlHm6cW0WG6snTf2I9di1bRwMnk3125HduzavOevfFUo/+/3+8s8jfT5zp3P1U5u39fb7z6PF508dz/oxbr+rsQwLH3XmyeGzaye2sbD4rp+2Kd4fPn6QNoyLm0P77Jq+0d9/45+kWXwcKvhe8Z3tXga8XYqZxcehDU4qvzX+Ut96FbKKkYmyPB4c++Kt+uKHhFGcdPcDoMVoN1VfneKN4uRSDQWx1XC+f4oLtFGsfJDNkaVeWaoqHm3QLWKuTLaeID2f25hxdaocu4yOjivt4pXsvT3hFz11T4zSoGXc12hzSh58gSziptbzeD2jeUa/1vC277sQi5gZkaXJyUJzfTbO5sVCjWpJ6YdDfouYCWurTKVk++wWcfNy2lj/m6+zeIjDBhOFFf12zWwRN9P6j/Di4ukM3OmY5NdzzV9PzmBMVHJmVffns/YLm6dmc4R5kzYugprZz2v/vnOyZJdG+ZkGcTOaC2ctDrxRBV8aXKBXVxAJsW3mZ3KypvcIy3XzNjZt95B419xPdJs3AyAhh3WzNnvTm6aeNIda+h2PQezQ3OCx4UWUt2pn6HTIoirHDUUDEnX3R00v85BfpZ1rpu+5aVHjy1Bvjhns4eeVxwsqWVNc9pcmDAd/2P03VOHA9WjQkO/rjMJB4WKhVILRYfnaAUuRCna1ZWfclYmSOA7STeGvIouMc71FrFWM4jhKk02aFD8QCTaudSbxVjHbPb8kyuK49IlIM7022RWx1TDJglT/iUjOBi27L0fhHwb5eJ8Fq0HYmKu3YBbFt6PCpUY0sZpJ1JCWpEtLSyoSyOLOr4M0jT5Lf1ZxPI4CjkGzwFJkmoaQJ5YC5js/mpZjiluxGlJBJWlMbbd84+swoT7dKf65x9dKjkAFlea5pNl4fLlSNaVMFTXBlljqp4JKUVtquzwB+c4m98qlgJuq+Fb3C14GVFApIZZGQ54w4OVdqrtb45iviEr008CB/snW40Pry1QzEZBtNCxkRT+g3EDJO9SDdmeUg6b/9BVnZ6EdeFecrpyyOcpLdM98zqwSGvhKy0tzzhrqizA9WnautTd4rTeqHvpmosIkAhEcSkUoxQyp3lx5vvqurh6tgPT+1MpSkjRcoeqtfsgnYTrDL71Rfy9tO3vk9AIqilCKCtOjjfCy7U4rSynezZWydaXXZ1vOEcnMONOOu3faJ1sXvXxQQXV4RlFHrw5TzmdoqGGHUzeZGeq9AP01eOBxAyp5vzQiqSUNuDDtajvDfkMBjy83XUxtcYAnFGmjFYPgAMMdNl/slbWzm6BBKS20xp8oOEO07+diRYX2wNrZK8svBlHev42qm9L2i59oZbGZyghTEqBFcSj0DKmDwreAUdZSUZaG30YxTFB/Llbsh3R3eeJ5FdD8uyRAD5tBGRppxcVozgHPYnjT93a1OeuDRzTux8PS4Ep+PEZLb1NMrTe9vWZL9DFczDDnYCZlGvXqYJhz8KJkv6OsLBFhyho1PBkqHBwTVlFDV3siAoMT4ETVEFuGGZLeYGG6cFpDiiSAN32TpEqxZZihURccE34XEU4m+jrJiCjDWR62xP19EWgnZqiPZNgyDLJUCAk/lwr4azMSYxXXJLAeXQHpLaGbzIzwmnHoVJbui4fq/p7E/KWCBN5JZOagZhhzWgxMnIo2CWF6LxILMkMxYWiOqVtZypo9V1WCw2O5tPFoVh7hraSaObwNUT9weOrBAh4x/XIqSw+pV8Cl/MtUIBRURYiuodA6sxkl2xrvjzMjlCtwzACgML1yGi3dMd6AhalQzk4FlGMK3GFKzlog78rMB9iZu5al+7xBYCSMYl0s67x1WYKF6RQufI9BiRrAHFOpPGQzN+B+IpVLbsaQIM3GP8eydC9MI9yIPHMaLc3pYWUb59afmqiIKWx718htPJjAKmM1d3F73AF2dqM6gduTuCKoMFUzbNTV7cBu75Lba2yGIkWwd36snQtv5s05JfSbumTB2oC9f3asobIN2wfswPoCqW2qVWD9eQAOktiAHZPRoTwbsLrKdbQ0B6qN9WcNCKN2B4IaEnhuZsksPwcHNEdd5acIAefXduwcepSB4gyLIIpkDvmpQn8AEA83+bExzl93g4z3oWOVdiBjtuh4sx3IuDt6zcAO5LkD6HUfOygmnGHWv9Brd3YA1zDh6692ANeh4Wvop5gBUcfwPAg7gPkgIa55nAIwp2eF6+IngcvLIjddPGvAAbjcOsazHxuBE6b43E47cDmu2rMGHIDLU8bnWNuBS+qR2MBpwwTm8fB7HezA7flIYFriNGD7dgT2HJ1iCCBZQWDfmCWomLDE3j876Gh0wCyuF8Rx1Io3MaV5FQHCdBHFadKKGr7lUU3AsLUbaJM44b/u6aD2k693FXQfLc1BnQkwjTZB1op3vqGE6XKTJJnzaGkO6myO5yDL2iBLcecOuM+ePYA6dyDKx9l12JUg3P3rmooKJ6CQWNAy2PVjx6rYiOFdM2kcBHGSlN+i8xf2OUB4pMA9jasYB7HhJToF+OdxlhY2rGL+hqejj4/gnwP07hqZzswGskI07IhxrKih+8C0x+PxeDwej8fj8Xg8Ho/H4/F4PB6Px/N/5D+iFl3SkkTBkgAAAABJRU5ErkJggg==" 
-                      alt="bag">
-                      <h5>Bag</h5>
-                  </a>
+            </div>
+            <div class="d1">
+              <div>
+                <a href=""><i class="fa-solid fa-heart font" id="i1"><span id="count_wish">&nbsp;<span></span></span></i></a><br>
+                <a id="wishlist_tag" href="">Wishlist</a>
               </div>
+              <div>
+                <a id="count" href="">  <i class="fa-solid fa-bag-shopping font " id="i1"><span id="count_cart">&nbsp;</span></i></a>
+                <br>  <a id="cart_tag" href="">Bag</a>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
-</div>
-
-
-
-
+    </div>
+    <br><br><br><br>
+    
     <!-- Navbar ends -->
 
 
     <a href="">
     <div id="flatdiscount">
-     <i class="fa-solid fa-caret-right"></i>
+    
+      <div>
+        <img src="https://o.remove.bg/downloads/d06de7bf-94b9-4e3d-a0f7-a4680135ba74/image-removebg-preview.png" alt="triangle"/>
+      </div>  
       <h1>FLAT ₹200 OFF</h1>
   </div>
 </a>
@@ -956,7 +1368,7 @@
           ><img
             src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/f6826795-22fa-4d40-8573-d5e1ee1178531647417948719-Studiocontent-HPBanner-MenGymBasicsByiakashchoudhary.gif"
             alt=""
-        />
+        /></a>
       </div>
 
             <!-- -------------------------------------------- -->
@@ -965,10 +1377,199 @@
 
       
     </main>
+<!-- footer starts -->
+    <footer>
+      <div id="footer">
+        <div id="footer-up">
+            <div id="onlineShopping">
+                <h5>ONLINE SHOPPING</h5>
+                <div id="category">
+                    <p>Men</p>
+                    <p>Women</p>
+                    <p>Kids</p>
+                    <p>Home & Living</p>
+                    <p>Beauty</p>
+                    <p>Gift Cards</p>
+                    <p>Myntra Insider</p>
+                </div>
+                <h5>USEFUL LINKS</h5>
+                <div id="links">
+                    <p>Blog</p>
+                    <p>Careers</p>
+                    <p>Site Map</p>
+                    <p>Corporate Information</p>
+                    <p>Whitehat</p>
+                </div>
+            </div>
+            <div id="customer">
+                <h5>CUSTOMER POLICIES</h5>
+                <div id="contact">
+                    <p>Contact Us</p>
+                    <p>FAQ</p>
+                    <p>T&C</p>
+                    <p>Terms Of Use</p>
+                    <p>Track Orders</p>
+                    <p>Shipping</p>
+                    <p>Cancellation</p>
+                    <p>Returns</p>
+                    <p>Privacy Policy</p>
+                    <p>Geirvance Officer</p>
+                </div>
+            </div>
+            <div id="app">
+                <h5>EXPERIENCE MYNTRA ON MOBILE</h5>
+                <div id="linkImg">
+                    <img id="androidLink"
+                        src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png">
+                    <img id="iOSLink"
+                        src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png">
+                </div>
+                <div id="site">
+                    <h5>KEEP IN ITOUCH</h5>
+                    <div>
+                        <img src="https://constant.myntassets.com/web/assets/img/d2bec182-bef5-4fab-ade0-034d21ec82e31574604275433-fb.png"
+                            style="width: 20px; height: 20px;"></a>
+                        <img src="https://constant.myntassets.com/web/assets/img/f10bc513-c5a4-490c-9a9c-eb7a3cc8252b1574604275383-twitter.png"
+                            style="width: 20px; height: 20px;"></a>
+                        <img src="https://constant.myntassets.com/web/assets/img/a7e3c86e-566a-44a6-a733-179389dd87111574604275355-yt.png"
+                            style="width: 28px; height: 20px;"></a>
+                        <img src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png"
+                            style="width: 20px; height: 22px; top: 1px;"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="desktop">
+                <div id="desktop-section">
+                    <div id="original">
+                        <img src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png"
+                            style="width: 48px; height: 40px;">
+                    </div>
+                    <div>
+                        <strong>100% ORIGINAL </strong>guarantee for all products at myntra.com
+                    </div>
+                </div>
+                <div id="desktop_section">
+                    <div id="return">
+                        <img src="https://assets.myntassets.com/assets/images/retaillabs/2023/5/22/becb1b16-86cc-4e78-bdc7-7801c17947831684737106127-Return-Window-image.png"
+                            style="width: 48px; height: 49px;">
+                    </div>
+                    <div>
+                        <strong>Return within 14days </strong>of receiving your order
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popular">
+            <h5>POPULAR SEARCHES</h5>
+            <p>Makeup | Dresses For Girls | T-Shirts | Sandals | Headphones | Babydolls | Blazers For Men | Handbags |
+                Ladies Watches | Bags | Sport Shoes | Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops | Earrings |
+                Fastrack Watches | Kurtis | Nike | Smart Watches | Titan Watches | Designer Blouse | Gowns | Rings |
+                Cricket Shoes | Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion Show |
+                Lipstick | Saree | Watches | Dresses | Lehenga | Nike Shoes | Goggles | Bras | Suit | Chinos | Shoes |
+                Adidas Shoes | Woodland Shoes | Jewellery | Designers Sarees</p>
+            <div id="mailContact">
+                <p>In case of any concer,<span><a href="" style="text-decoration: none;"><strong> Contact Us</strong></a></span></p>
+                <p>© 2023 www.myntra.com. All rights reserved.</p>
+            </div>
+        </div>
+        <hr>
+        <div id="register">
+            <p><strong>Registered Office Address</strong></p>
+            <div id="address">
+                <p>Buildings Alyssa,</p>
+                <p>Begonia and Clover situated in Embassy Tech Village,</p>
+                <p>Outer Ring Road,</p>
+                <p>Devarabeesanahalli Village,</p>
+                <p>Varthur Hobli,</p>
+                <p>Bengaluru - 560103, India</p>
+                <p>CIN: U72300KA2007PTC041799</p>
+                <p>Telephone: +91-80-61561999</p>
+            </div>
+        </div>
+        <hr>
+        <p><strong>ONLINE SHOPPING MADE EASY AT MYNTRA</strong></p>
+        <p id="grey">If you would like to experience the best of online shopping for men, women and kids in India, you are at the
+            right place. Myntra is the ultimate destination for fashion and lifestyle, being host to a wide array of
+            merchandise including clothing, footwear, accessories, jewellery, personal care products and more. It is
+            time to redefine your style statement with our treasure-trove of trendy items. Our online store brings you
+            the latest in designer products straight out of fashion houses. You can shop online at Myntra from the
+            comfort of your home and get your favourites delivered right to your doorstep.</p>
+        <div id="orderList">
+            <p><strong>BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION</strong></p>
+            <p>Be it clothing, footwear or accessories, Myntra offers you the ideal combination of fashion and
+                functionality for men, women and kids. You will realise that the sky is the limit when it comes to the
+                types of outfits that you can purchase for different occasions.
+            </p>
+            <ol type="1">
+                <li><strong>Smart men's clothing </strong>- At Myntra you will find myriad options in smart formal shirts and trousers, cool T-shirts and jeans, or kurta and pyjama combinations for men. Wear your attitude with printed T-shirts. Create the back-to-campus vibe with varsity T-shirts and distressed jeans. Be it gingham, buffalo, or window-pane style, checked shirts are unbeatably smart. Team them up with chinos, cuffed jeans or cropped trousers for a smart casual look. Opt for a stylish layered look with biker jackets. Head out in cloudy weather with courage in water-resistant jackets. Browse through our innerwear section to find supportive garments which would keep you confident in any outfit.</li>
+                <li><strong>Trendy women's clothing </strong>- Online shopping for women at Myntra is a mood-elevating experience. Look hip and stay comfortable with chinos and printed shorts this summer. Look hot on your date dressed in a little black dress, or opt for red dresses for a sassy vibe. Striped dresses and T-shirts represent the classic spirit of nautical fashion. Choose your favourites from among Bardot, off-shoulder, shirt-style, blouson, embroidered and peplum tops, to name a few. Team them up with skinny-fit jeans, skirts or palazzos. Kurtis and jeans make the perfect fusion-wear combination for the cool urbanite. Our grand sarees and lehenga-choli selections are perfect to make an impression at big social events such as weddings. Our salwar-kameez sets, kurtas and Patiala suits make comfortable options for regular wear.</li>
+                <li><strong>Fashionable footwear </strong>- While clothes maketh the man, the type of footwear you wear reflects your personality. We bring you an exhaustive lineup of options in casual shoes for men, such as sneakers and loafers. Make a power statement at work dressed in brogues and oxfords. Practice for your marathon with running shoes for men and women. Choose shoes for individual games such as tennis, football, basketball, and the like. Or step into the casual style and comfort offered by sandals, sliders, and flip-flops. Explore our lineup of fashionable footwear for ladies, including pumps, heeled boots, wedge-heels, and pencil-heels. Or enjoy the best of comfort and style with embellished and metallic flats.</li>
+                <li><strong>Stylish accessories </strong>- Myntra is one of the best online shopping sites for classy accessories that perfectly complement your outfits. You can select smart analogue or digital watches and match them up with belts and ties. Pick up spacious bags, backpacks, and wallets to store your essentials in style. Whether you prefer minimal jewellery or grand and sparkling pieces, our online jewellery collection offers you many impressive options.</li>
+                <li><strong>Fun and frolic </strong>- Online shopping for kids at Myntra is a complete joy. Your little princess is going to love the wide variety of pretty dresses, ballerina shoes, headbands and clips. Delight your son by picking up sports shoes, superhero T-shirts, football jerseys and much more from our online store. Check out our lineup of toys with which you can create memories to cherish.</li>
+                <li><strong>Beauty begins here </strong>- You can also refresh, rejuvenate and reveal beautiful skin with personal care, beauty and grooming products from Myntra. Our soaps, shower gels, skin care creams, lotions and other ayurvedic products are specially formulated to reduce the effect of aging and offer the ideal cleansing experience. Keep your scalp clean and your hair uber-stylish with shampoos and hair care products. Choose makeup to enhance your natural beauty.</li>
+            </ol>
+            Myntra is one of the best online shopping sites in India which could help transform your living spaces completely. Add colour and personality to your bedrooms with bed linen and curtains. Use smart tableware to impress your guest. Wall decor, clocks, photo frames and artificial plants are sure to breathe life into any corner of your home.
+        </div>
+        <p><strong>AFFORDABLE FASHION AT YOUR FINGERTIPS</strong></p>
+        <p >Myntra is one of the unique online shopping sites in India where fashion is accessible to all. Check out our new arrivals to view the latest designer clothing, footwear and accessories in the market. You can get your hands on the trendiest style every season in western wear. You can also avail the best of ethnic fashion during all Indian festive occasions. You are sure to be impressed with our seasonal discounts on footwear, trousers, shirts, backpacks and more. The end-of-season sale is the ultimate experience when fashion gets unbelievably affordable.</p>
+        <p><strong>MYNTRA INSIDER</strong></p>
+        <p >Every online shopping experience is precious. Hence, a cashless reward-based customer loyalty program called Myntra Insider was introduced to enhance your online experience. The program is applicable to every registered customer and measures rewards in the form of Insider Points.</p>
+        <p>There are four levels to achieve in the program, as the Insider Points accumulate. They are - Insider, Select, Elite or Icon. Apart from offering discounts on Myntra and partner platform coupons, each tier comes with its own special perks.</p>
+        <div id="inside">
+            <p><strong>Insider</strong></p>
+            <ul>
+                <li>Opportunity to master any domain in fashion with tips from celebrity stylists at Myntra Masterclass sessions.</li>
+                <li>Exclusive early access to Limited Edition products</li>
+            </ul>
+            <p><strong>ELite</strong></p>
+            <ul>
+                <li>VIP access to special sale events such as the End of Reason Sale (EORS) and product launches.</li>
+                <li>Curated collections from celeb stylists.</li>
+            </ul>
+            <p> <strong>Icon</strong></p>
+            <ul>
+                <li>Chance to get on guest lists for special events.</li>
+            </ul>
+        </div>
+        <div>
+            <p><strong>Myntra Studio - The Personalised Fashion Feed You Wouldn’t Want To Miss Out On</strong></p>
+            <p>The world wide web is evolving at a relentless pace, and with an accelerated growth each passing year, there is bound to be an overwhelming surge of online content. It was for this very reason that personalisation of search feeds was proposed as a solution to combat the overload of irrelevant information.</p>
+            <p>Several social media platforms such as Facebook and Instagram along with various online shopping websites have chosen to help filter content, increasing user engagement, retention and customer loyalty.</p>
+            <p>Myntra is one such online shopping website that joins the list of platforms that help curate a personalised fashion feed. Named theMyntra Studio, this personalised search feed brings you the latest men and women’s fashion trends, celebrity styles, branded content and daily updates from your favourite fashion labels.</p>
+            <p>If you are wondering how impactful Myntra Studio can be, we are listing out five perks of having a rich, meaningful, and personalised fashion feed in your life.</p>
+        </div>
+        <ol type="1">
+            <li><strong>Keep Up With What Your Favourite Fashion Icons Are Upto</strong></li>
+            <p>The #OOTD, AKA outfit of the day hashtag trend has been a rage among fashion bloggers and stylists. The whole concept of building an outfit from scratch and showcasing it to a huge community of enthusiasts using the hashtag has helped individuals with understanding trends and making suitable for daily wear.</p>
+            <p>Imagine if you could keep up with every piece of clothing and accessory worn by the fashion icons you look upto. From Sonam Kapoor to Hailey Baldwin Bieber, Myntra Studio has a ‘Stories’ feature to help track celebrity fashion trends, exploring details such as their outfit of the day. This way, you would not ever miss out on the latest celebrity fashion trends, from all around the world.</p>
+            <li><strong>Quick Fashion Tip And Tricks</strong></li>
+            <p>Whether it is draping a saree into a dhoti style, wearing the right lingerie under certain dresses or discovering multiple uses out of heavy ethnic wear, Myntra Studio will help you acquire some unique and useful fashion hacks. Each hack is designed with the intention to help you get the best wear out of everything in your wardrobe.</p>
+            <li><strong>Updates on What Is Trending and New Product Launches</strong></li>
+            <p>Since fast fashion seems to be extremely hard to keep up with these days, a quick update on what is trending in accessories, clothing and footwear would certainly be of great help. Myntra Studio helps you stay connected to the most beloved and sought after brands such as Puma, Coverstory, The Label Life and so many more.</p>
+            <p>Your feed keeps you updated with stories of what the brands are creating including clothing, footwear and jewellery, along with their new seasonal collections.</p>
+            <li><strong>Explicit Step-By-Step Beauty Routines From Experts</strong></li>
+            <p>Just like fashion, the beauty community keeps on growing, and with brands such as Huda Beauty, MAC and the latest Kay Beauty by Katrina Kaif, are constantly coming up with mind-blowing products. Whether it is creating a no-makeup look, different winged eyeliners, do-it-yourself facial masks and other personal care beauty routines, Myntra Studio is here for you.</p>
+            <li><strong>Celebrity Confessions And A Look Into Their Lives</strong></li>
+            <p>A bonus feature that Myntra Studio has in store for you is celebrity confessions and a peek into their lives. So, Myntra helps you stay connected to your most beloved celebrities in a matter of clicks.</p>
+            <p>If you are very particular when it comes to the content you wish to view and engage with on social media, the ability to intricately filter content helps achieve that. Applying the same formula for hardcore fashion lovers and shoppers, Myntra Studio brings you a daily fashion fix incorporating everything that you love, all at one place. Sign up on Myntra today and start organising your fashion feed, just the way you want to.</p>
+        </ol>
+        <p><strong>MYNTRA APP</strong></p>
+        <p>Myntra, India’s no. 1 online fashion destination justifies its fashion relevance by bringing something new and chic to the table on the daily. Fashion trends seem to change at lightning speed, yet the Myntra shopping app has managed to keep up without any hiccups. In addition, Myntra has vowed to serve customers to the best of its ability by introducing its first-ever loyalty program, The Myntra Insider. Gain access to priority delivery, early sales, lucrative deals and other special perks on all your shopping with the Myntra app. Download the Myntra app on your Android or IOS device today and experience shopping like never before!</p>
+        <p><strong>HISTORY OF MYNTRA</strong></p>
+        <p>Becoming India’s no. 1 fashion destination is not an easy feat. Sincere efforts, digital enhancements and a team of dedicated personnel with an equally loyal customer base have made Myntra the online platform that it is today. The original B2B venture for personalized gifts was conceived in 2007 but transitioned into a full-fledged ecommerce giant within a span of just a few years. By 2012, Myntra had introduced 350 Indian and international brands to its platform, and this has only grown in number each passing year. Today Myntra sits on top of the online fashion game with an astounding social media following, a loyalty program dedicated to its customers, and tempting, hard-to-say-no-to deals.</p>
+        <p>The Myntra shopping app came into existence in the year 2015 to further encourage customers’ shopping sprees. Download the app on your Android or IOS device this very minute to experience fashion like never before</p>
+        <p><strong>SHOP ONLINE AT MYNTRA WITH COMPLETE CONVENIENCE</strong></p>
+        <p>Another reason why Myntra is the best of all online stores is the complete convenience that it offers. You can view your favourite brands with price options for different products in one place. A user-friendly interface will guide you through your selection process. Comprehensive size charts, product information and high-resolution images help you make the best buying decisions. You also have the freedom to choose your payment options, be it card or cash-on-delivery. The 14-day returns policy gives you more power as a buyer. Additionally, the try-and-buy option for select products takes customer-friendliness to the next level.</p>
+        <p>Enjoy the hassle-free experience as you shop comfortably from your home or your workplace. You can also shop for your friends, family and loved-ones and avail our gift services for special occasions.</p>
+    </div>
+  </footer>
+<!-- footer ends -->
 
-
+  </body>
+  </html>
+<!------------- Js Functionality --------------->
 <script>
-  var counter = 1;
+var counter = 1;
 var slideInterval = 3000; // Adjust the speed of sliding (in milliseconds)
 var isFastTransition = false; // Set to true for a faster transition from the last slide to the first slide
 
@@ -987,6 +1588,5 @@ setInterval(function() {
   }
 }, slideInterval);
 
+
 </script>   
-</body>
-</html>
