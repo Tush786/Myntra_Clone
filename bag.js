@@ -12,19 +12,18 @@ let products = [
     Finalprice: 374,
     image:
       "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/22913888/2023/4/27/e27bafeb-eca1-4d3a-b41f-44301e1891a91682565216782FUBARMenMulticolouredSlimFitTartanChecksOpaqueCheckedCasualS1.jpg",
-  }
-  ,
-  // {
-  //   name: "FUBAR",
-  //   type: "Tartan Checked Spread Collar Cotton Casual Shirt",
-  //   seller: "sold by:Vision star",
-  //   size: "M",
-  //   MRP: 1499,
-  //   discount: 75,
-  //   Finalprice: 374,
-  //   image:
-  //     "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/22913888/2023/4/27/e27bafeb-eca1-4d3a-b41f-44301e1891a91682565216782FUBARMenMulticolouredSlimFitTartanChecksOpaqueCheckedCasualS1.jpg",
-  // }
+  },
+  {
+    name: "FUBAR",
+    type: "Tartan Checked Spread Collar Cotton Casual Shirt",
+    seller: "sold by:Vision star",
+    size: "M",
+    MRP: 1499,
+    discount: 75,
+    Finalprice: 374,
+    image:
+      "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/22913888/2023/4/27/e27bafeb-eca1-4d3a-b41f-44301e1891a91682565216782FUBARMenMulticolouredSlimFitTartanChecksOpaqueCheckedCasualS1.jpg",
+  },
 ];
 
 if (products.length === 0) {
@@ -83,10 +82,6 @@ function displayData() {
     let div3 = document.createElement("div");
     div3.style.display = "flex";
 
-
-
-
-
     let size = document.createElement("select");
     size.setAttribute("class", "Size");
     let size1 = document.createElement("option");
@@ -95,7 +90,7 @@ function displayData() {
 
     let size2 = document.createElement("option");
     size2.value = "2";
-    size2.text = "Size: M"; 
+    size2.text = "Size: M";
 
     let size3 = document.createElement("option");
     size3.value = "3";
@@ -108,11 +103,8 @@ function displayData() {
     let size5 = document.createElement("option");
     size5.value = "5";
     size5.text = "Size: XXL";
-   
-    size.append(size1,size2,size3,size4,size5);
 
-
-
+    size.append(size1, size2, size3, size4, size5);
 
     let qty = document.createElement("select");
     qty.setAttribute("id", "Qty");
@@ -256,6 +248,7 @@ function displayData() {
 function deleteData(ele, i) {
   products.splice(i, 1);
   //displayData(products);
+  console.log(products);
 }
 
 function getQty(qty, value, mrp, disc) {

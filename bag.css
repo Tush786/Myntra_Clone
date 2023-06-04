@@ -177,7 +177,8 @@ body {
 }
 
 .orderbtn {
-  width: 95%;
+  display: block;
+  width: 88%;
   background-color: #ff3f6c;
   color: white;
   padding: 12px;
@@ -185,6 +186,8 @@ body {
   margin-left: 10px;
   margin-bottom: 8px;
   border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
 }
 
 #dlt {
