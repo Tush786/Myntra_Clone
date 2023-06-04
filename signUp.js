@@ -5,8 +5,10 @@ document.querySelector("form").addEventListener("submit", myProfile)
     function myProfile(){
         event.preventDefault()
 
+        var numbers = JSON.parse(localStorage.getItem("number")) 
+
         var detailObj = {
-            pass : document.querySelector("#password").value,
+            numbers: numbers,
             name : document.querySelector("#name").value,
             email : document.querySelector("#email").value,
             number : document.querySelector("#mobile").value
@@ -49,7 +51,7 @@ document.querySelector("form").addEventListener("submit", myProfile)
 
                 localStorage.setItem("details", JSON.stringify(detailArr))
 
-                window.location.href = "";
+                window.location.href = "home.html";
             }
         }
         
@@ -60,6 +62,8 @@ document.querySelector("form").addEventListener("submit", myProfile)
     }
 
     var mobile = JSON.parse(localStorage.getItem("number"))||[]
+
+    // document.querySelector("#mobileNum").textContent = mobile
 
     displayNumber()
 

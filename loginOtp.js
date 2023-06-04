@@ -1,38 +1,35 @@
-var otpFields = document.querySelectorAll('#otp-input');
-    var enteredOTP = '';
+var numbers = JSON.parse(localStorage.getItem("number"));
+var users = JSON.parse(localStorage.getItem("details")) || [];
+var existingUser = users.find(function(user) {
+  return user.numbers === numbers;
+});
 
-    otpFields.forEach((field, index) => {
-      field.addEventListener('input', (event) => {
-        var enteredDigit = event.target.value;
-        enteredOTP = updateOTP(enteredOTP, enteredDigit, index);
-
-        if (enteredOTP.length === 4 && enteredOTP === '1234') {
-          window.location.href = 'signup.html'; 
-        } else if (enteredOTP.length === 4) {
-          alert('Wrong OTP. Try again.'); 
-        }
-
-        if (enteredDigit.length === 1 && index < otpFields.length - 1) {
-          otpFields[index + 1].focus();
-        } else if (enteredDigit.length === 0 && index > 0) {
-          otpFields[index - 1].focus();
-        }
+var otpInputs = document.querySelectorAll('#otp-input');
+otpInputs.forEach(function(input, index) {
+  input.addEventListener('input', function() {
+    if (index === otpInputs.length - 1 && input.value !== '') {
+      var enteredOTP = '';
+      otpInputs.forEach(function(input) {
+        enteredOTP += input.value;
       });
-    });
-
-    function updateOTP(existingOTP, digit, index) {
-      var otpArray = existingOTP.split('');
-
-      if (digit.length === 0) {
-        otpArray.splice(index, 1); 
-      } else {
-        otpArray[index] = digit; 
+      if (enteredOTP === '1234') {
+        if (existingUser) {
+          // User is already registered, redirect to home page
+          window.location.href = "home.html"
+        }else{
+          window.location.href = 'signUp.html';
+        }
+      }else {
+        alert('Invalid OTP. Please try again.');
       }
-
-      return otpArray.join('');
+    } else if (input.value !== '') {
+      input.nextElementSibling.focus();
     }
-
-    function showError(message) {
-      var errorElement = document.getElementById('error');
-      errorElement.textContent = message;
+  });
+  
+  input.addEventListener('keydown', function(event) {
+    if (event.key === 'Backspace' && input.value === '') {
+      input.previousElementSibling.focus();
     }
+  });
+});

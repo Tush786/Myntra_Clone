@@ -2,6 +2,9 @@ body{
     background-color: rgb(252, 236, 239);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+body input{
+    outline: none;
+}
 #navbar{
     background-color: white;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
