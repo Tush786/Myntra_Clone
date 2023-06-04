@@ -177,7 +177,6 @@ a{
     cursor: pointer;
 }
 @media only screen and (max-width: 500px) {
-    /* Small Screen  */
     #main_container{
         display: none;
     }
