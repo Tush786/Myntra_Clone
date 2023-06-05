@@ -126,7 +126,8 @@ a{
 }
 #resend{
     border: none;
-    color: rgb(241, 20, 57);
+    color: rgb(16, 5, 41);
+    font-weight: 600;
     background-color: white;
     margin-top: 10%;
 }
