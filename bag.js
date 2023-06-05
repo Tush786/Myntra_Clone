@@ -30,12 +30,12 @@ let jugadMrp;
 // let products = JSON.parse(localStorage.getItem("cartGo"))||[]
 let products = JSON.parse(localStorage.getItem("wishlistGo"))||[]
 
- console.log(products);
+ //console.log(products);
 
 if (products.length === 0) {
   displayEmpty();
 } else {
-  displayData();
+  displayData(products);
   calculatesum();
 }
 
@@ -58,8 +58,12 @@ function displayEmpty() {
   mainBody.append(img);
 }
 
-function displayData() {
+function displayData(products) {
+   
+  document.querySelector(".itembox").textContent="";
+
   products.map(function (ele, i) {
+
     let div1 = document.createElement("div");
     div1.setAttribute("class", "item");
 
@@ -248,8 +252,8 @@ function displayData() {
 
     div1.append(proimg, div2, delteItem);
 
-    let body = document.querySelector(".itembox");
-    body.append(div1);
+    document.querySelector(".itembox").append(div1);
+    
 
     let MRP2 = document.getElementById("MRP2");
     // MRP2.textContent = ele.MRP;
@@ -277,11 +281,25 @@ function displayData() {
 
 
 
+let dltarr = JSON.parse(localStorage.getItem("dlt")) ||[];
 
 function deleteData(ele, i) {
-  products.splice(i, 1);
-  //displayData(products);
+  dltarr.push(ele);
+  localStorage.setItem("dlt",JSON.stringify(dltarr));
+  products.splice(i,1);
+  localStorage.setItem("wishlistGo",JSON.stringify(products))
+
+  if(dltarr.length===0){
+    displayEmpty();
+  }
+  else{
+    displayData(products);
+  }
+ 
 }
+
+
+
 
 function getQty(qty, value, mrp, disc) {
   let fp = qty.value * +value;
