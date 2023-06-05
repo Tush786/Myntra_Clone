@@ -177,7 +177,10 @@ body {
 }
 
 .orderbtn {
-  width: 95%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 88%;
   background-color: #ff3f6c;
   color: white;
   padding: 12px;
@@ -185,6 +188,7 @@ body {
   margin-left: 10px;
   margin-bottom: 8px;
   border-radius: 2px;
+
 }
 
 #dlt {
@@ -193,7 +197,7 @@ body {
   border: none;
   margin-top: 7px;
 
-  margin-left: 60px;
+  margin-left: 160px;
   background-color: white;
 }
  
