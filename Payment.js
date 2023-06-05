@@ -286,46 +286,9 @@ function Payment() {
   document.getElementById("Slt_Pay").append(form);
 }
 
-// <--- Calculate the Total Product Price --->
 
-var Arr = [
-  { Pro_Nam: "Shoes", Price: 2300 },
-  { Pro_Nam: "Shoes", Price: 2460 },
-  { Pro_Nam: "Shoes", Price: 5403 },
-  { Pro_Nam: "Shoes", Price: 5400 },
-];
 
-localStorage.setItem("Price", JSON.stringify(Arr));
-// var Arr_CCode=["Masai20","Bounty10","Masai15","Masai30"]
-var Arr_CCode = ["Masai20", "Bounty101", "Masai151", "Masai301"];
 
-var Total = 0;
-function Total_Pri() {
-  Arr.map(function (el) {
-    Total += +el.Price;
-  });
-
-  document.getElementById("TP").textContent = Total;
-
-  var X = 0;
-  Arr_CCode.map(function (elm) {
-    if (elm === "Masai20") {
-      X = Total * 0.2;
-    } else if (elm === "Bounty10") {
-      X = Total * 0.1;
-    } else if (elm === "Masai15") {
-      X = Total * 0.15;
-    } else if (elm === "Massai30") {
-      X = Total * 0.3;
-    }
-
-    var DP = (document.getElementById("DP").textContent = Total - X);
-
-    if (DP < 999) {
-      document.getElementById("Final_Pri").textContent = DP + 99;
-    }
-  });
-}
 
 // <------ For Close the tab when OTP is check------------------>
 function Hidden() {
@@ -338,3 +301,73 @@ function ReOTP() {
   var Hide = document.getElementById("PUP2");
   Hide.style.visibility = "hidden";
 }
+
+function Show_Gift(){
+  event.preventDefault()
+  var DIV=document.createElement("div")
+  DIV.setAttribute("id","Show_gift");
+  DIV.style.visibility="visible"
+
+  var DIV1=document.createElement("div")
+  var H=document.createElement("h3");
+  H.textContent="Apply Gift Card";
+
+  var H2=document.createElement("h5");
+  H2.textContent="Gift card value will be added to your Myntra Credit";
+
+  var INP1=document.createElement("input");
+  INP1.setAttribute("type","text")
+  INP1.setAttribute("placeholder","16 Digit Gift Card Number");
+
+
+  var INP2=document.createElement("input");
+  INP2.setAttribute("type","text")
+  INP2.setAttribute("placeholder","6 Digit Gift Card Pin");
+
+  var BTN=document.createElement("button");
+  BTN.textContent="ADD TO MYNTRA CREDIT"
+  // BTN.addEventListener("click",Hide_Gift);
+
+  DIV.append(H,H2,INP1,INP2,BTN)
+
+  document.getElementById("Gift_Show").append(DIV);
+
+  var Body=document.querySelector("*")
+  Body.style.background="#8f8e8e";
+  Body.style.border="#8f8e8e"
+
+  var Opt=document.getElementById("Pay_opt");
+  Opt.style.background="#8f8e8e";
+
+}
+
+
+// function Hide_Gift{
+//   event.preventDefault();
+//   var Hide=document.getElementById("Show_gift");
+//   Hide.style.visibility="Hidden"
+// }
+
+
+// <--- Calculate the Total Product Price --->
+
+
+let Price_arr = JSON.parse(localStorage.getItem("wishlistGo"))||[]
+
+Total_Pri(Price_arr)
+
+function Total_Pri(Arr) {
+  let Total=Arr.reduce(function(acc,elm){
+     return acc+(+elm.MP);
+  },0)
+  document.getElementById("TP").textContent = Total;
+
+  let FP=Arr.reduce(function(acc,elm){
+    return acc+(+elm.price);
+ },0)
+
+ document.getElementById("Final_Pri").textContent = FP;
+
+ document.getElementById("DP").textContent = Total-FP;
+}
+console.log(Total);
