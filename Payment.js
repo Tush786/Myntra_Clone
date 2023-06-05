@@ -194,7 +194,7 @@ function Verify_OTP(otp) {
     document.getElementById("Show").append(Land_Page);
 
     var PAY = document.getElementById("P");
-    PAY.style.color = "#abe6d9";
+    PAY.style.color = "green";
     var Pay = document.getElementById("Succ");
     Pay.style.display = "None";
   } else {
