@@ -39,17 +39,21 @@ function Deb_Cred() {
 
   var form = document.createElement("form");
   form.setAttribute("id", "Pay_form");
+ 
 
   var CN = document.createElement("input");
   CN.setAttribute("type", "text");
   CN.setAttribute("placeholder", "Card Number");
   CN.setAttribute("id", "C_N");
   CN.setAttribute("maxlength", "16");
+  CN.required=true;
+
 
   var Name = document.createElement("input");
   Name.setAttribute("id", "Name_Card");
   Name.setAttribute("type", "text");
   Name.setAttribute("placeholder", "Name On Card");
+  Name.required=true;
 
   var Div = document.createElement("div");
   var Val = document.createElement("input");
@@ -60,6 +64,7 @@ function Deb_Cred() {
   Val.setAttribute("name", "start");
   Val.setAttribute("min", "2018-03");
   Val.setAttribute("value", "2035-05");
+  Val.required=true;
 
   Val.style.width = "290px";
   Val.style.fontFamily = " sans-serif";
@@ -70,6 +75,7 @@ function Deb_Cred() {
   CVV.setAttribute("placeholder", "CVV");
   CVV.setAttribute("maxlength", "3");
   CVV.style.width = "150px";
+  CVV.required=true;
 
   Div.append(Val, CVV);
 
