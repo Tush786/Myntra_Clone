@@ -15,7 +15,7 @@ otpInputs.forEach(function(input, index) {
       if (enteredOTP === '1234') {
         if (existingUser) {
           // User is already registered, redirect to home page
-          window.location.href = "home.html"
+          window.location.href = "index.html"
         }else{
           window.location.href = 'signUp.html';
         }
