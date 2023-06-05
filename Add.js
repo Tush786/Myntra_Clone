@@ -103,3 +103,27 @@ function Del(elm, i) {
   var ADD = document.getElementById("Add");
   ADD.style.display = "visible";
 }
+
+
+let Arr = JSON.parse(localStorage.getItem("wishlistGo"))||[]
+// var Arr_CCode=["Masai20","Bounty10","Masai15","Masai30"]
+// var Arr_CCode = ["Masai20", "Bounty101", "Masai151", "Masai301"];
+
+Total_Pri(Arr)
+
+function Total_Pri(Arr) {
+  let Total=Arr.reduce(function(acc,elm){
+     return acc+(+elm.MP);
+  },0)
+  document.getElementById("TP").textContent = Total;
+
+  let FP=Arr.reduce(function(acc,elm){
+    return acc+(+elm.price);
+ },0)
+
+ document.getElementById("Final_Pri").textContent = FP;
+
+ document.getElementById("DP").textContent = Total-FP;
+}
+console.log(Total);
+  

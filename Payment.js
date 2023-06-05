@@ -286,46 +286,9 @@ function Payment() {
   document.getElementById("Slt_Pay").append(form);
 }
 
-// <--- Calculate the Total Product Price --->
 
-var Arr = [
-  { Pro_Nam: "Shoes", Price: 2300 },
-  { Pro_Nam: "Shoes", Price: 2460 },
-  { Pro_Nam: "Shoes", Price: 5403 },
-  { Pro_Nam: "Shoes", Price: 5400 },
-];
 
-localStorage.setItem("Price", JSON.stringify(Arr));
-// var Arr_CCode=["Masai20","Bounty10","Masai15","Masai30"]
-var Arr_CCode = ["Masai20", "Bounty101", "Masai151", "Masai301"];
 
-var Total = 0;
-function Total_Pri() {
-  Arr.map(function (el) {
-    Total += +el.Price;
-  });
-
-  document.getElementById("TP").textContent = Total;
-
-  var X = 0;
-  Arr_CCode.map(function (elm) {
-    if (elm === "Masai20") {
-      X = Total * 0.2;
-    } else if (elm === "Bounty10") {
-      X = Total * 0.1;
-    } else if (elm === "Masai15") {
-      X = Total * 0.15;
-    } else if (elm === "Massai30") {
-      X = Total * 0.3;
-    }
-
-    var DP = (document.getElementById("DP").textContent = Total - X);
-
-    if (DP < 999) {
-      document.getElementById("Final_Pri").textContent = DP + 99;
-    }
-  });
-}
 
 // <------ For Close the tab when OTP is check------------------>
 function Hidden() {
@@ -369,7 +332,6 @@ function Show_Gift(){
 
   document.getElementById("Gift_Show").append(DIV);
 
-
   var Body=document.querySelector("*")
   Body.style.background="#8f8e8e";
   Body.style.border="#8f8e8e"
@@ -385,3 +347,27 @@ function Show_Gift(){
 //   var Hide=document.getElementById("Show_gift");
 //   Hide.style.visibility="Hidden"
 // }
+
+
+// <--- Calculate the Total Product Price --->
+
+
+let Price_arr = JSON.parse(localStorage.getItem("wishlistGo"))||[]
+
+Total_Pri(Price_arr)
+
+function Total_Pri(Arr) {
+  let Total=Arr.reduce(function(acc,elm){
+     return acc+(+elm.MP);
+  },0)
+  document.getElementById("TP").textContent = Total;
+
+  let FP=Arr.reduce(function(acc,elm){
+    return acc+(+elm.price);
+ },0)
+
+ document.getElementById("Final_Pri").textContent = FP;
+
+ document.getElementById("DP").textContent = Total-FP;
+}
+console.log(Total);
