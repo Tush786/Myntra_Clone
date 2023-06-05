@@ -313,9 +313,5 @@ function calculatesum() {
   }, 0);
 
   jugadMrp = document.getElementById("MRP2").textContent = totalMrp;
-<<<<<<< HEAD
+  
   }
-=======
-  
-  
->>>>>>> 8937505388941da45fcc8873c8cd0848dc3b6c43
