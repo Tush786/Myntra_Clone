@@ -495,12 +495,12 @@ sup{
 
 
 
-#flatdiscount img{
+/* #flatdiscount img{
   width: 100%;
 margin-left: -5px;
   margin-top: 20px;
-  /* margin-right: 10px; */
-}
+  
+} */
 
 
 
@@ -515,6 +515,8 @@ margin-left: -5px;
   /* margin-top: 50px; */
   margin-right: 15px; 
   transform: rotate(180deg);
+  align-items: center;
+  margin-top: 18px;
   
  
 }
