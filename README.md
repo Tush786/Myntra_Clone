@@ -14,10 +14,11 @@
 
 <h2>Contributers :-</h2>
 <ul>
-  <li>Shubhi Tiwari:-https://www.linkedin.com/in/shubhi-tiwari-7a4131237/</li>
-   <li>Nitin Singh:-https://www.linkedin.com/in/nitin-singh-68ba35262/</li>
-   <li>Aviral Dixit:-https://www.linkedin.com/in/aviral-dixit-599482241/</li>
-  <li>Rishitosh Singh</li>
+  <li><a href="https://www.linkedin.com/in/shubhi-tiwari-7a4131237/">Shubhi Tiwari</a></li>
+<li><a href="https://www.linkedin.com/in/nitin-singh-68ba35262/">Nitin Singh</a></li>
+  <li><a href="https://www.linkedin.com/in/aviral-dixit-599482241/">Aviral Dixit</a></li>
+   <li><a href="">Rishitosh Singh</a></li>
+ 
 </ul>
 
 <h2>Tech Stack :-</h2>
