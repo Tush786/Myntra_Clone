@@ -17,7 +17,7 @@
   <li>Shubhi Tiwari:-https://www.linkedin.com/in/shubhi-tiwari-7a4131237/</li>
    <li>Nitin Singh:-https://www.linkedin.com/in/nitin-singh-68ba35262/</li>
    <li>Aviral Dixit:-https://www.linkedin.com/in/aviral-dixit-599482241/</li>
-  <li>Rishu:-https</li>
+  <li>Rishitosh Singh</li>
 </ul>
 
 <h2>Tech Stack :-</h2>
